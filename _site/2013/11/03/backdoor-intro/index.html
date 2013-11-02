@@ -1,0 +1,130 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>说说后门 - wulujia’s notepad</title>
+  <meta name="description" content="wulujia’s notepad - 信息安全, DLP, 敏感信息防泄漏, 创业">
+  <meta name="author" content="wulujia">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/disqus.css">
+
+  <script src="/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+  <div id="container">
+
+    <header>
+  <h1><a class="fadedlink" href="/" title="Home">&laquo;</a> 说说后门 <small>03 Nov 2013</small></h1>
+
+  <nav>
+    <ul class="clearfix">
+    
+      <li><a href="/tag/security.html">security</a></li>
+    
+      <li><a href="/tag/backdoor.html">backdoor</a></li>
+    
+      <li><a href="/tag/router.html">router</a></li>
+    
+    </ul>
+  </nav>
+</header>
+
+<div id="post" role="main">
+  <h1>说说后门</h1>
+
+<p>最近有两款路由器分别被爆出固件中存在后门。</p>
+
+<h2>D-link</h2>
+
+<p>D-link是台湾公司，成立于1986年，『公司致力于高级网络、宽带、数字、语音和数据通信解决方案的设计、制造和营销，是业界的全球领导者』（官网描述）。他们的后门是：设置User-Agent为『xmlset_roodkcableoj28840ybtide』，可不经认证访问web控制界面。</p>
+
+<p>字符串『roodkcableoj28840ybtide』是一段倒序文字，反过来读就是『edit by 04882 joel backdoor』。</p>
+
+<h2>Tenda</h2>
+
+<p>腾达是中国公司，是『全球领先的网络设备提供商。自1999年创立以来，公司一直致力于让每一台智能设备都能简单方便的联网，让大众轻松互联，乐享智能新生活』。他们的后门是：发送特定字符串和命令，即可执行该命令。例如：echo -ne &quot;w302r_mfg\x00x/bin/ls&quot; | nc -u -q 5 192.168.0.1 7329，就可以在路由器上执行/bin/ls命令。</p>
+
+<h2>影响范围</h2>
+
+<ul>
+<li>D-link：DIR-100、DI-524、DI-524UP、DI-604S、DI-604UP、DI-604+、TM-G5240等；</li>
+<li>Tenda：W301R、W302R、3g611R、3gR、W330R、W311R、W368R等；</li>
+</ul>
+
+<h2>攻击</h2>
+
+<ul>
+<li>已经有针对这些路由器的大规模扫描发生。例如github上已经有针对性nmap脚本，专门用于快速扫描腾达路由器：https://github.com/ea/nmap-scripts/blob/master/tenda-backdoor.nse</li>
+<li>有些人可能不知道会有什么影响，很简单：你的所有设备都可能暴露在黑客面前，你的全部网络访问都可能被完全记录。</li>
+</ul>
+
+<h2>延伸思考</h2>
+
+<ul>
+<li>这两家厂商为什么要在设备中放后门？是个人行为？企业行为还是国家行为？</li>
+<li>只有中国人的设备有后门问题吗？</li>
+<li>最近很流行的『智能路由器』，会带来什么样的变化？</li>
+<li>屌丝技术员如果该怎么办？我的思路，一是用树莓派做个小防火墙；二是换用如open-wrt之类的开源固件。如果有更好的办法，欢迎告诉我 :)</li>
+</ul>
+
+<h2>其他</h2>
+
+<p>两篇文章都有中文翻译：</p>
+
+<ul>
+<li>D-link：http://blog.jobbole.com/49959/<br></li>
+<li>Tenda：http://www.freebuf.com/articles/terminal/14425.html</li>
+</ul>
+
+
+  <p class="back">&laquo; <a href="/">Home</a></p>
+</div>
+
+<!--h2>Related Posts</h2>
+<ul class="posts_list">
+  
+</ul-->
+
+<hr/>
+
+<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wulujia'; // required: replace example with your forum shortname
+    //var disqus_developer = 1; // developer mode is on, for testing locally
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    <footer>
+      <span>wulujia </span>
+      <a class="fadedlink" href="mailto:wulujia@gmail.com"><img src="/gfx/gmail-logo.png" alt="@gmail"></a>
+    </footer>
+  </div>
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>wulujia’s notepad</title>
+ <link href="http://feeds.feedburner.com/" rel="self"/>
+ <link href="http://wulujia.com"/>
+ <updated>2013-11-02T19:21:08+08:00</updated>
+ <id>http://wulujia.com</id>
+ <author>
+   <name>wulujia</name>
+   <email>wulujia@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>说说后门</title>
+   <link href="http://wulujia.com/2013/11/03/backdoor-intro"/>
+   <updated>2013-11-03T03:19:22+08:00</updated>
+   <id>http://wulujia.com/2013/11/03/backdoor-intro</id>
+   <content type="html">&lt;h1&gt;说说后门&lt;/h1&gt;
+
+&lt;p&gt;最近有两款路由器分别被爆出固件中存在后门。&lt;/p&gt;
+
+&lt;h2&gt;D-link&lt;/h2&gt;
+
+&lt;p&gt;D-link是台湾公司，成立于1986年，『公司致力于高级网络、宽带、数字、语音和数据通信解决方案的设计、制造和营销，是业界的全球领导者』（官网描述）。他们的后门是：设置User-Agent为『xmlset_roodkcableoj28840ybtide』，可不经认证访问web控制界面。&lt;/p&gt;
+
+&lt;p&gt;字符串『roodkcableoj28840ybtide』是一段倒序文字，反过来读就是『edit by 04882 joel backdoor』。&lt;/p&gt;
+
+&lt;h2&gt;Tenda&lt;/h2&gt;
+
+&lt;p&gt;腾达是中国公司，是『全球领先的网络设备提供商。自1999年创立以来，公司一直致力于让每一台智能设备都能简单方便的联网，让大众轻松互联，乐享智能新生活』。他们的后门是：发送特定字符串和命令，即可执行该命令。例如：echo -ne &amp;quot;w302r_mfg\x00x/bin/ls&amp;quot; | nc -u -q 5 192.168.0.1 7329，就可以在路由器上执行/bin/ls命令。&lt;/p&gt;
+
+&lt;h2&gt;影响范围&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;D-link：DIR-100、DI-524、DI-524UP、DI-604S、DI-604UP、DI-604+、TM-G5240等；&lt;/li&gt;
+&lt;li&gt;Tenda：W301R、W302R、3g611R、3gR、W330R、W311R、W368R等；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;攻击&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;已经有针对这些路由器的大规模扫描发生。例如github上已经有针对性nmap脚本，专门用于快速扫描腾达路由器：https://github.com/ea/nmap-scripts/blob/master/tenda-backdoor.nse&lt;/li&gt;
+&lt;li&gt;有些人可能不知道会有什么影响，很简单：你的所有设备都可能暴露在黑客面前，你的全部网络访问都可能被完全记录。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;延伸思考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;这两家厂商为什么要在设备中放后门？是个人行为？企业行为还是国家行为？&lt;/li&gt;
+&lt;li&gt;只有中国人的设备有后门问题吗？&lt;/li&gt;
+&lt;li&gt;最近很流行的『智能路由器』，会带来什么样的变化？&lt;/li&gt;
+&lt;li&gt;屌丝技术员如果该怎么办？我的思路，一是用树莓派做个小防火墙；二是换用如open-wrt之类的开源固件。如果有更好的办法，欢迎告诉我 :)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;其他&lt;/h2&gt;
+
+&lt;p&gt;两篇文章都有中文翻译：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;D-link：http://blog.jobbole.com/49959/&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Tenda：http://www.freebuf.com/articles/terminal/14425.html&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

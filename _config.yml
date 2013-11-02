@@ -1,0 +1,11 @@
+safe:         true
+pygments:     true
+markdown:     redcarpet
+permalink:    /:year/:month/:day/:title
+exclude:      ["CNAME", "Rakefile"]
+title:        wulujia’s notepad
+description:  信息安全, DLP, 敏感信息防泄漏, 创业
+url_root:     http://wulujia.com
+author:       wulujia
+author_email: wulujia@gmail.com
+disqus_id: wulujia

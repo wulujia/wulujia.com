@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<head>
+  <h1>{{ site.title }}</h1>
+</head>
+
+<h2><span>日志</span></h2>
+<ul>
+  {% for post in site.posts %}
+    {% include post.html %}
+  {% endfor %}
+</ul>
+
+<h2>链接</h2>
+<ul>
+  <li>
+      <a href="http://www.unnoo.com/">大成天下</a>
+      <span>&mdash; 数据加密、敏感信息防泄漏（DLP）厂商</span>
+  </li>
+</ul>
