@@ -4,13 +4,191 @@
  <title>NOTEPAD</title>
  <link href="http://feeds.feedburner.com/" rel="self"/>
  <link href="http://wulujia.com"/>
- <updated>2013-11-03T22:50:49+08:00</updated>
+ <updated>2013-11-04T13:46:15+08:00</updated>
  <id>http://wulujia.com</id>
  <author>
    <name>wulujia</name>
    <email>wulujia@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Mac优秀软件记录</title>
+   <link href="http://wulujia.com/2013/11/05/Mac-software-list"/>
+   <updated>2013-11-05T03:19:22+08:00</updated>
+   <id>http://wulujia.com/2013/11/05/Mac-software-list</id>
+   <content type="html">&lt;p&gt;记录一些不错的Mac软件清单，适用OS X 10.9 Mavericks。&lt;/p&gt;
+
+&lt;h1&gt;互联网&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;QQ
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://im.qq.com/macqq/&quot;&gt;http://im.qq.com/macqq/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Skype
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.skype.com&quot;&gt;http://www.skype.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;用于MSN、Skype聊天，需要注意，不要下载到『中国版』&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;效率&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;百度输入法
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://wuxian.baidu.com/input/mac.html&quot;&gt;http://wuxian.baidu.com/input/mac.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Keka
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kekaosx.com&quot;&gt;http://www.kekaosx.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mac下压缩中文名文件到Windows下会乱码，加密码压缩也比较麻烦，用Keka可以解决&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The Unarchiver
+
+&lt;ul&gt;
+&lt;li&gt;App Store，&lt;a href=&quot;http://wakaba.c3.cx/s/apps/unarchiver&quot;&gt;http://wakaba.c3.cx/s/apps/unarchiver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;用于解压rar文件&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Evernote
+
+&lt;ul&gt;
+&lt;li&gt;App Store，&lt;a href=&quot;http://www.yinxiang.com&quot;&gt;http://www.yinxiang.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;各种记录，PC与手机同步很方便&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Keynote
+
+&lt;ul&gt;
+&lt;li&gt;App Store下载&lt;/li&gt;
+&lt;li&gt;做演示时很有用，配合iPhone上的Keynote remote，效果良好&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;TextMate
+
+&lt;ul&gt;
+&lt;li&gt;官网&lt;a href=&quot;http://macromates.com&quot;&gt;http://macromates.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github开发网站&lt;a href=&quot;https://github.com/textmate/textmate&quot;&gt;https://github.com/textmate/textmate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;很不错的开源文本编辑器，比较适合程序员&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Paparazzi
+
+&lt;ul&gt;
+&lt;li&gt;官网&lt;a href=&quot;http://derailer.org/paparazzi/&quot;&gt;http://derailer.org/paparazzi/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;用于网页截图（Retina屏幕的浏览器截屏扩展许多都会失效）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;商业软件&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Byword
+
+&lt;ul&gt;
+&lt;li&gt;商业软件，可以在App Store下载，&lt;a href=&quot;http://bywordapp.com&quot;&gt;http://bywordapp.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;效果极简的码字工具&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Camtasia
+
+&lt;ul&gt;
+&lt;li&gt;商业软件，&lt;a href=&quot;http://www.techsmith.com/camtasia.html&quot;&gt;http://www.techsmith.com/camtasia.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;做录像的好工具&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;MindManager
+
+&lt;ul&gt;
+&lt;li&gt;商业软件，&lt;a href=&quot;http://www.mindjet.com/mindmanager/&quot;&gt;http://www.mindjet.com/mindmanager/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;思维导图工具&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;OmniFocus &amp;amp; OmniGraffle
+
+&lt;ul&gt;
+&lt;li&gt;商业软件，&lt;a href=&quot;http://www.omnigroup.com&quot;&gt;http://www.omnigroup.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OminiFocus是时间管理工具&lt;/li&gt;
+&lt;li&gt;OmniGraffle是画图工具&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Balsamiq Mockups
+
+&lt;ul&gt;
+&lt;li&gt;商业软件，&lt;a href=&quot;http://balsamiq.com/products/mockups&quot;&gt;http://balsamiq.com/products/mockups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;画产品原型图的工具，类似手绘效果&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Office
+
+&lt;ul&gt;
+&lt;li&gt;商业软件，&lt;a href=&quot;http://www.microsoft.com/mac/products&quot;&gt;http://www.microsoft.com/mac/products&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;哪怕Mac下有iWorks，处理别人发来的Office文档效果还是不佳，需要备一套&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;安全&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TrueCrypt：硬盘加密，&lt;a href=&quot;http://www.truecrypt.org&quot;&gt;http://www.truecrypt.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keepassx：密码存储，&lt;a href=&quot;http://www.keepassx.org&quot;&gt;http://www.keepassx.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;命令行&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;brew
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://brew.sh&quot;&gt;http://brew.sh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安装方式：ruby -e &amp;quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&amp;quot;&lt;/li&gt;
+&lt;li&gt;方便地安装Linux下的各种工具&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;通过brew安装的软件
+
+&lt;ul&gt;
+&lt;li&gt;brew install wget&lt;/li&gt;
+&lt;li&gt;brew install nmap&lt;/li&gt;
+&lt;li&gt;brew install git&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;zsh
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;https://github.com/robbyrussell/oh-my-zsh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh&lt;/li&gt;
+&lt;li&gt;更好用的shell&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;jekyll
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;http://jekyllrb.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;gem install jekyll&lt;/li&gt;
+&lt;li&gt;处理文本，用于发表博客&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;库&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FlashPlayer：&lt;a href=&quot;http://get.adobe.com/cn/flashplayer/&quot;&gt;http://get.adobe.com/cn/flashplayer/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Java：用到时系统会提示自动安装，&lt;a href=&quot;https://java.com/&quot;&gt;https://java.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;XCode command line tool：用时会提示安装，官网&lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;https://developer.apple.com/xcode/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;其他&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MplayerX：视频播放器，&lt;a href=&quot;http://mplayerx.org&quot;&gt;http://mplayerx.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chrome：浏览器，&lt;a href=&quot;http://www.google.com/chrome/%E2%80%8E&quot;&gt;http://www.google.com/chrome/‎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Firefox：浏览器，&lt;a href=&quot;http://www.mozilla.org/&quot;&gt;http://www.mozilla.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Thunder：迅雷下载，&lt;a href=&quot;http://mac.xunlei.com&quot;&gt;http://mac.xunlei.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Filezilla：开源FTP客户端，&lt;a href=&quot;https://filezilla-project.org&quot;&gt;https://filezilla-project.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Transmission：开源BT客户端，&lt;a href=&quot;http://www.transmissionbt.com&quot;&gt;http://www.transmissionbt.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TeamViewer：远程协助，&lt;a href=&quot;http://www.teamviewer.com/&quot;&gt;http://www.teamviewer.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Skitch：印象笔记旗下的『圈点』，图片工具，&lt;a href=&quot;http://www.yinxiang.com/skitch/&quot;&gt;http://www.yinxiang.com/skitch/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Foxmail：邮件客户端，&lt;a href=&quot;http://foxmail.com.cn/mac/&quot;&gt;http://foxmail.com.cn/mac/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Calibre：电子书管理与转换，&lt;a href=&quot;http://calibre-ebook.com&quot;&gt;http://calibre-ebook.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>数据泄露的防范之道</title>
