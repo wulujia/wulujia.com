@@ -4,7 +4,7 @@
  <title>NOTEPAD</title>
  <link href="http://feeds.feedburner.com/" rel="self"/>
  <link href="http://wulujia.com"/>
- <updated>2013-11-04T13:46:15+08:00</updated>
+ <updated>2013-11-09T12:28:16+08:00</updated>
  <id>http://wulujia.com</id>
  <author>
    <name>wulujia</name>
@@ -13,48 +13,290 @@
 
  
  <entry>
+   <title>OSMOCOMBB新手指南</title>
+   <link href="http://wulujia.com/2013/11/10/OsmocomBB-Guide"/>
+   <updated>2013-11-10T00:00:00+08:00</updated>
+   <id>http://wulujia.com/2013/11/10/OsmocomBB-Guide</id>
+   <content type="html">&lt;p&gt;很多人可能知道，GSM通讯是可以被监听的。不过，我猜测，知道下面这几点的可能不多：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;廉价的监听设备只需要数十元成本；&lt;/li&gt;
+&lt;li&gt;所需要的技能只是懂英语，会编译Linux程序；&lt;/li&gt;
+&lt;li&gt;至少在2010年，技术已经成熟，2011年有开源实现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1&gt;基础&lt;/h1&gt;
+
+&lt;p&gt;OSMOCOM-bb全称Open source mobile communication Baseband，是GSM协议栈的开源实现。开发团队的介绍文字是：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;OsmocomBB is an Free Software / Open Source GSM Baseband software implementation. It intends to completely replace the need for a proprietary GSM baseband software, such as&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;drivers for the GSM analog and digital baseband (integrated and external) peripherals &lt;/li&gt;
+&lt;li&gt;the GSM phone-side protocol stack, from layer 1 up to layer 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In short: By using OsmocomBB on a compatible phone, you are able to make and receive phone calls, send and receive SMS, etc. based on Free Software only.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;关于加密&lt;/h2&gt;
+
+&lt;p&gt;GSM加密采用A5算法。A5算法1989年由法国人开发，是一种序列密码，它是欧洲GSM标准中规定的加密算法，专用于数字蜂窝移动电话的加密，用于对从电话到基站连接的加密。A5的特点是效率高，适合硬件上高效实现。&lt;/p&gt;
+
+&lt;p&gt;A5发展至今，有A5/1、A5/2、A5/3、A5/4、A5/5、A5/6、A5/7等7个版本，目前GSM终端一般都支持A5/1和A5/3，A5/4以上基本不涉及。值得注意的是，A5/2是被『故意弱化强度』的版本，专用于『出口』给『友邦』，2006年后被强制叫停，终端不允许支持A5/2。&lt;/p&gt;
+
+&lt;p&gt;A5/1与A5/2两个算法的设计后来被Marc Briceno、Ian Goldberg和David Wagner用逆向工程破解，下图是当年用于破解的设备：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/gsmclone.jpg&quot; alt=&quot;当年用于破解的设备&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;国内的GSM采用了什么算法呢……嗯……你试试就知道了……&lt;/p&gt;
+
+&lt;h2&gt;一些名词&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MS：Mobile Station，移动终端；&lt;/li&gt;
+&lt;li&gt;IMSI：International Mobile Subscriber Identity，国际移动用户标识号，是TD系统分给用户的唯一标识号，它存储在SIM卡、HLR/VLR中，最多由15个数字组成；&lt;/li&gt;
+&lt;li&gt;MCC：Mobile Country Code，是移动用户的国家号，中国是460；&lt;/li&gt;
+&lt;li&gt;MNC：Mobile Network Code ，是移动用户的所属PLMN网号，中国移动为00、02，中国联通为01；&lt;/li&gt;
+&lt;li&gt;MSIN：Mobile Subscriber Identification Number，是移动用户标识；&lt;/li&gt;
+&lt;li&gt;NMSI：National Mobile Subscriber Identification，是在某一国家内MS唯一的识别码；&lt;/li&gt;
+&lt;li&gt;BTS：Base Transceiver Station，基站收发器；&lt;/li&gt;
+&lt;li&gt;BSC：Base Station Controller，基站控制器；&lt;/li&gt;
+&lt;li&gt;MSC：Mobile Switching Center，移动交换中心。移动网络完成呼叫连接、过区切换控制、无线信道管理等功能的设备，同时也是移动网与公用电话交换网(PSTN)、综合业务数字网(ISDN)等固定网的接口设备；&lt;/li&gt;
+&lt;li&gt;HLR：Home location register。保存用户的基本信息，如你的SIM的卡号、手机号码、签约信息等，和动态信息，如当前的位置、是否已经关机等；&lt;/li&gt;
+&lt;li&gt;VLR：Visiting location register，保存的是用户的动态信息和状态信息，以及从HLR下载的用户的签约信息；&lt;/li&gt;
+&lt;li&gt;CCCH：Common Control CHannel，公共控制信道。是一种“一点对多点”的双向控制信道，其用途是在呼叫接续阶段，传输链路连接所需要的控制信令与信息。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;手机开机时的位置更新过程&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;MS（手机）向系统请求分配信令信道（SDCCH）；&lt;/li&gt;
+&lt;li&gt;MSC收到手机发来的IMSI可及消息；&lt;/li&gt;
+&lt;li&gt;MSC将IMSI可及信息再发送给VLR，VLR将IMSI不可及标记更新为IMSI可及；&lt;/li&gt;
+&lt;li&gt;VLR反馈MSC可及信息信号；&lt;/li&gt;
+&lt;li&gt;MSC再将反馈信号发给手机。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;MS倾向信号强的BTS，使用哪种算法由基站决定，这也导致了可以用伪基站进行攻击。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1&gt;使用方法演示&lt;/h1&gt;
+
+&lt;p&gt;用法很简单：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;将firmware刷入手机&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/mobile1.png&quot; alt=&quot;将firmware刷入手机&quot; style=&quot;width: 70%; height: 70%&quot;/&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;扫描基站&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/mobile2.png&quot; alt=&quot;扫描基站&quot; style=&quot;width: 70%; height: 70%&quot;/&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;选择想要监听的基站并开始监听数据&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/mobile3.png&quot; alt=&quot;开始监听&quot; style=&quot;width: 70%; height: 70%&quot;/&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;将监听数据写入本地cap包&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/mobile4.png&quot; alt=&quot;写入本地cap包&quot; style=&quot;width: 70%; height: 70%&quot;/&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;通过过滤程序过滤出监听到的短信（理论上话音一样能够被监听及解码，只是涉及技术更为复杂）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/mobile5.png&quot; alt=&quot;过滤出监听到的短信&quot; style=&quot;width: 70%; height: 70%&quot;/&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1&gt;具体编译方法&lt;/h1&gt;
+
+&lt;h2&gt;预备&lt;/h2&gt;
+
+&lt;p&gt;这里我使用的Linux环境为ubuntu 12.04 x86（交叉环境不支持64位系统），其他系统方法一样，命令会有些差别，请自行分辨。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;预备&lt;/p&gt;
+
+&lt;p&gt;apt-get install build-essential g++ gcc make automake libtool libusb-dev pkg-config git wireshark tshark&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装libosmocore&lt;/p&gt;
+
+&lt;p&gt;git clone git://git.osmocom.org/libosmocore.git&lt;br&gt;
+cd libosmocore/&lt;br&gt;
+autoreconf -i&lt;br&gt;
+./configure&lt;br&gt;
+make&lt;br&gt;
+sudo make install  &lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;编译&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;编译osmocom-bb.git，细节可以参考&lt;a href=&quot;https://srlabs.de/gsm-map-tutorial/&quot;&gt;https://srlabs.de/gsm-map-tutorial/&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;下载代码到~/cell_logger&lt;/p&gt;
+
+&lt;p&gt;mkdir -p ~/cell&lt;em&gt;logger&lt;br&gt;
+cd ~/cell&lt;/em&gt;logger&lt;br&gt;
+git clone git://git.osmocom.org/osmocom-bb.git&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载ARM交叉编译环境&lt;/p&gt;
+
+&lt;p&gt;wget http://gnuarm.com/bu-2.15&lt;em&gt;gcc-3.4.3-c-c++-java&lt;/em&gt;nl-1.12.0&lt;em&gt;gi-6.1.tar.bz2&lt;br&gt;
+tar xf bu-2.15&lt;/em&gt;gcc-3.4.3-c-c++-java&lt;em&gt;nl-1.12.0&lt;/em&gt;gi-6.1.tar.bz2  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;准备OsmocomBB&amp;#39;s burst_ind branch&lt;/p&gt;
+
+&lt;p&gt;cd ~/cell_logger/osmocom-bb&lt;br&gt;
+git checkout --track origin/luca/gsmmap  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译OsmocomBB&lt;/p&gt;
+
+&lt;p&gt;cd src&lt;br&gt;
+export PATH=$PATH:~/cell_logger/gnuarm-3.4.3/bin&lt;br&gt;
+make&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;执行&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;连接手机，刷入firmware，不同设备需要刷入不同的firmware，这里的例子是针对Motorola C118的&lt;/p&gt;
+
+&lt;p&gt;sudo ~/cell&lt;em&gt;logger/osmocom-bb/src/host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 ~/cell&lt;/em&gt;logger/osmocom-bb/src/target/firmware/board/compal_e88/layer1.compalram.bin&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;按一下手机开机键开机，确认进入osmocom-bb系统&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;扫描基站&lt;/p&gt;
+
+&lt;p&gt;sudo ~/cell&lt;em&gt;logger/osmocom-bb/src/host/layer23/src/misc/cell&lt;/em&gt;log -O&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;监听某基站，例如31&lt;/p&gt;
+
+&lt;p&gt;~/cell&lt;em&gt;logger/osmocom-bb/src/host/layer23/src/misc/ccch&lt;/em&gt;scan -i 127.0.0.1 -a 31&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;保存日志&lt;/p&gt;
+
+&lt;p&gt;dumpcap -i lo -w ~/cell_logger/mobilelog/a.log&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可以用wireshark或tshark打开日志，过滤出相应协议字段，就能读出短信了。SMS协议字段参考tshark -G fields | grep gsm_sms&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h1&gt;其他&lt;/h1&gt;
+
+&lt;h2&gt;接多个手机&lt;/h2&gt;
+
+&lt;p&gt;ccch_scan只是一个例子程序，用它并不能连接多个手机通讯——有人提出过同样的疑问，可以参考&lt;a href=&quot;http://comments.gmane.org/gmane.comp.mobile.osmocom.baseband.devel/2627&quot;&gt;链接1&lt;/a&gt;和&lt;a href=&quot;http://baseband-devel.722152.n3.nabble.com/About-sniff-multi-bursts-in-a-frame-CCCH-CONF-td3368272.html&quot;&gt;链接2&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;需要使用Sylvain Munaut的DSP Patch版本，git地址在：&lt;a href=&quot;http://cgit.osmocom.org/osmocom-bb/?h=sylvain/testing&quot;&gt;http://cgit.osmocom.org/osmocom-bb/?h=sylvain/testing&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;图：8台手机基本能够覆盖一个区域的基站。所以，有人在干活（感谢TK提供图片并对我玩OsmocomBB的指点）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/mobile6.png&quot; alt=&quot;同时接8台手机监听&quot; style=&quot;width: 50%; height: 50%&quot;/&gt;&lt;/p&gt;
+
+&lt;h2&gt;上行捕获&lt;/h2&gt;
+
+&lt;p&gt;参考链接：&lt;a href=&quot;http://bb.osmocom.org/trac/wiki/Hardware/FilterReplacement&quot;&gt;http://bb.osmocom.org/trac/wiki/Hardware/FilterReplacement&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;要使手机能够成为『passive uplink sniffer』，必须动到电烙铁，替换掉RX filters。&lt;/p&gt;
+
+&lt;p&gt;替换前：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/motorola_filter_replacement_step_1_low.jpg&quot; alt=&quot;替换前&quot; style=&quot;width: 50%; height: 50%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;摘掉后：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/motorola_filter_replacement_step_2_low.jpg&quot; alt=&quot;摘掉后&quot; style=&quot;width: 50%; height: 50%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;替换后：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/motorola_filter_replacement_step_7_low.jpg&quot; alt=&quot;替换后&quot; style=&quot;width: 50%; height: 50%&quot;/&gt;&lt;/p&gt;
+
+&lt;h2&gt;Some Tips&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;开机键不是长按，而是短按，否则就进入原系统了；&lt;/li&gt;
+&lt;li&gt;CP210x的接线，RX和TX有可能需要对调；&lt;/li&gt;
+&lt;li&gt;交叉编译要在i386系统，否则make的时候会“gnuarm-3.4.3/bin/arm-elf-gcc: No such file or directory”；&lt;/li&gt;
+&lt;li&gt;检查连线是否正常，可以参考：http://bb.osmocom.org/trac/wiki/Hardware/CP210xTutorial，运行cp210x-program需要先安装ibusb-dev，如果输出是“No devices found”或“Unable to send request, 3709 result=-110”，则有问题。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;h1&gt;坏人能用类似的技术做什么&lt;/h1&gt;
+
+&lt;h2&gt;替用户订阅SP服务&lt;/h2&gt;
+
+&lt;p&gt;2007年，用户投诉都被盗打了XXX信息台和发送短信至XXX（手机钱包话费支付业务）的情况，且用户都统一被收取了该声讯台的包月费30元，通过话单梳理，全地区在该时间段内（从12月1日至10日）共有8000多用户被收取了包月费，根据业务支撑部门的统计，已超过了过该业务的正常业务量数倍多，属于不正常现象。&lt;/p&gt;
+
+&lt;p&gt;这个案例是@tombkeeper在TSRC演讲的时候提到，我后来找他学习细节时知道的，可以参考链接&lt;a href=&quot;http://www.leaffly.com/post/steal_calls_for_game.html&quot;&gt;盗打购买游戏点卡的分析&lt;/a&gt;。在2007年，就有人用这样的『高科技手段』挣钱，黑产真是不能小看。&lt;/p&gt;
+
+&lt;h2&gt;群发垃圾广告&lt;/h2&gt;
+
+&lt;p&gt;贴两张图，信息量应该就够大了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/mobile_spam.png&quot; alt=&quot;垃圾短信&quot; style=&quot;width: 50%; height: 50%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/osmocombb-guide/gnuradio.png&quot; alt=&quot;短信群发工具&quot; style=&quot;width: 50%; height: 50%&quot;/&gt;&lt;/p&gt;
+
+&lt;h2&gt;社工与窃密&lt;/h2&gt;
+
+&lt;p&gt;既然能够伪造短信，试想一下，如果有人：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;伪造贵厂厂长的电话给你发短信，索取某项目细节信息&lt;/li&gt;
+&lt;li&gt;在竞标、投标前期和现场伪造短信传递决策信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;其他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;短信、语音、gprs都是可窃听的，只是技术难度不同&lt;/li&gt;
+&lt;li&gt;目前在工业控制系统中还大量使用GSM通信自动传输信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;攻击取决于攻击者的想象力，黑产从业者永远更缺乏安全感，绝大多数时候更搏命、更努力创新。企业安全的守门员门，站稳喽，你守得住吗？&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1&gt;录像&lt;/h1&gt;
+
+&lt;p&gt;有个录像还是能看得比较清楚的：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://v.qq.com/boke/page/e/4/b/e0118d61u4b.html&quot;&gt;http://v.qq.com/boke/page/e/4/b/e0118d61u4b.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h1&gt;参考链接&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OsmocomBB项目官网：&lt;a href=&quot;http://bb.osmocom.org&quot;&gt;http://bb.osmocom.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Osmocom-bb git：&lt;a href=&quot;http://cgit.osmocom.org/osmocom-bb/&quot;&gt;http://cgit.osmocom.org/osmocom-bb/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RadioWar Wiki（中文）：&lt;a href=&quot;http://wiki.radiowar.org/&quot;&gt;http://wiki.radiowar.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GSM Security：&lt;a href=&quot;http://www.gsm-security.net/&quot;&gt;http://www.gsm-security.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A5/1破解：&lt;a href=&quot;http://mtlin.org/article/a51.html&quot;&gt;http://mtlin.org/article/a51.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;IMSI catcher：&lt;a href=&quot;https://opensource.srlabs.de/projects/catcher/wiki&quot;&gt;https://opensource.srlabs.de/projects/catcher/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Mac优秀软件记录</title>
    <link href="http://wulujia.com/2013/11/05/Mac-software-list"/>
    <updated>2013-11-05T03:19:22+08:00</updated>
    <id>http://wulujia.com/2013/11/05/Mac-software-list</id>
    <content type="html">&lt;p&gt;记录一些不错的Mac软件清单，适用OS X 10.9 Mavericks。&lt;/p&gt;
 
-&lt;h1&gt;互联网&lt;/h1&gt;
+&lt;h1&gt;办公相关&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;QQ
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://im.qq.com/macqq/&quot;&gt;http://im.qq.com/macqq/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Skype
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.skype.com&quot;&gt;http://www.skype.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;用于MSN、Skype聊天，需要注意，不要下载到『中国版』&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;效率&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;百度输入法
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://wuxian.baidu.com/input/mac.html&quot;&gt;http://wuxian.baidu.com/input/mac.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Keka
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.kekaosx.com&quot;&gt;http://www.kekaosx.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Mac下压缩中文名文件到Windows下会乱码，加密码压缩也比较麻烦，用Keka可以解决&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;The Unarchiver
-
-&lt;ul&gt;
-&lt;li&gt;App Store，&lt;a href=&quot;http://wakaba.c3.cx/s/apps/unarchiver&quot;&gt;http://wakaba.c3.cx/s/apps/unarchiver&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;用于解压rar文件&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Evernote
 
 &lt;ul&gt;
@@ -67,29 +309,11 @@
 &lt;li&gt;App Store下载&lt;/li&gt;
 &lt;li&gt;做演示时很有用，配合iPhone上的Keynote remote，效果良好&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;TextMate
-
-&lt;ul&gt;
-&lt;li&gt;官网&lt;a href=&quot;http://macromates.com&quot;&gt;http://macromates.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Github开发网站&lt;a href=&quot;https://github.com/textmate/textmate&quot;&gt;https://github.com/textmate/textmate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;很不错的开源文本编辑器，比较适合程序员&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Paparazzi
 
 &lt;ul&gt;
 &lt;li&gt;官网&lt;a href=&quot;http://derailer.org/paparazzi/&quot;&gt;http://derailer.org/paparazzi/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;用于网页截图（Retina屏幕的浏览器截屏扩展许多都会失效）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;商业软件&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Byword
-
-&lt;ul&gt;
-&lt;li&gt;商业软件，可以在App Store下载，&lt;a href=&quot;http://bywordapp.com&quot;&gt;http://bywordapp.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;效果极简的码字工具&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Camtasia
 
@@ -122,6 +346,72 @@
 &lt;li&gt;商业软件，&lt;a href=&quot;http://www.microsoft.com/mac/products&quot;&gt;http://www.microsoft.com/mac/products&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;哪怕Mac下有iWorks，处理别人发来的Office文档效果还是不佳，需要备一套&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Foxmail：邮件客户端，&lt;a href=&quot;http://foxmail.com.cn/mac/&quot;&gt;http://foxmail.com.cn/mac/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;文本编辑&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Byword
+
+&lt;ul&gt;
+&lt;li&gt;商业软件，可以在App Store下载，&lt;a href=&quot;http://bywordapp.com&quot;&gt;http://bywordapp.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;效果极简的码字工具&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;TextMate
+
+&lt;ul&gt;
+&lt;li&gt;官网&lt;a href=&quot;http://macromates.com&quot;&gt;http://macromates.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github开发网站&lt;a href=&quot;https://github.com/textmate/textmate&quot;&gt;https://github.com/textmate/textmate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;很不错的开源文本编辑器，比较适合程序员&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;日常&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;百度输入法：&lt;a href=&quot;http://wuxian.baidu.com/input/mac.html&quot;&gt;http://wuxian.baidu.com/input/mac.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Time out：逼你定时休息，App Store下载，&lt;a href=&quot;http://www.dejal.com/timeout/&quot;&gt;http://www.dejal.com/timeout/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;压缩与解压&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Keka
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.kekaosx.com&quot;&gt;http://www.kekaosx.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mac下压缩中文名文件到Windows下会乱码，加密码压缩也比较麻烦，用Keka可以解决&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The Unarchiver
+
+&lt;ul&gt;
+&lt;li&gt;App Store，&lt;a href=&quot;http://wakaba.c3.cx/s/apps/unarchiver&quot;&gt;http://wakaba.c3.cx/s/apps/unarchiver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;用于解压rar文件&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;聊天&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;QQ
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://im.qq.com/macqq/&quot;&gt;http://im.qq.com/macqq/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Skype
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.skype.com&quot;&gt;http://www.skype.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;用于MSN、Skype聊天，需要注意，不要下载到『中国版』&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;浏览器&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Chrome：浏览器，&lt;a href=&quot;http://www.google.com/chrome/%E2%80%8E&quot;&gt;http://www.google.com/chrome/‎&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Firefox：浏览器，&lt;a href=&quot;http://www.mozilla.org/&quot;&gt;http://www.mozilla.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1&gt;安全&lt;/h1&gt;
@@ -129,6 +419,20 @@
 &lt;ul&gt;
 &lt;li&gt;TrueCrypt：硬盘加密，&lt;a href=&quot;http://www.truecrypt.org&quot;&gt;http://www.truecrypt.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Keepassx：密码存储，&lt;a href=&quot;http://www.keepassx.org&quot;&gt;http://www.keepassx.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;娱乐&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MplayerX：视频播放器，&lt;a href=&quot;http://mplayerx.org&quot;&gt;http://mplayerx.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;下载&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Thunder：迅雷下载，&lt;a href=&quot;http://mac.xunlei.com&quot;&gt;http://mac.xunlei.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Filezilla：开源FTP客户端，&lt;a href=&quot;https://filezilla-project.org&quot;&gt;https://filezilla-project.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Transmission：开源BT客户端，&lt;a href=&quot;http://www.transmissionbt.com&quot;&gt;http://www.transmissionbt.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1&gt;命令行&lt;/h1&gt;
@@ -147,6 +451,7 @@
 &lt;li&gt;brew install wget&lt;/li&gt;
 &lt;li&gt;brew install nmap&lt;/li&gt;
 &lt;li&gt;brew install git&lt;/li&gt;
+&lt;li&gt;brew install p7zip&lt;/li&gt;
 &lt;li&gt;……&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;zsh
@@ -176,16 +481,10 @@
 &lt;h1&gt;其他&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;MplayerX：视频播放器，&lt;a href=&quot;http://mplayerx.org&quot;&gt;http://mplayerx.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Chrome：浏览器，&lt;a href=&quot;http://www.google.com/chrome/%E2%80%8E&quot;&gt;http://www.google.com/chrome/‎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Firefox：浏览器，&lt;a href=&quot;http://www.mozilla.org/&quot;&gt;http://www.mozilla.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Thunder：迅雷下载，&lt;a href=&quot;http://mac.xunlei.com&quot;&gt;http://mac.xunlei.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Filezilla：开源FTP客户端，&lt;a href=&quot;https://filezilla-project.org&quot;&gt;https://filezilla-project.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Transmission：开源BT客户端，&lt;a href=&quot;http://www.transmissionbt.com&quot;&gt;http://www.transmissionbt.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;TeamViewer：远程协助，&lt;a href=&quot;http://www.teamviewer.com/&quot;&gt;http://www.teamviewer.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Skitch：印象笔记旗下的『圈点』，图片工具，&lt;a href=&quot;http://www.yinxiang.com/skitch/&quot;&gt;http://www.yinxiang.com/skitch/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Foxmail：邮件客户端，&lt;a href=&quot;http://foxmail.com.cn/mac/&quot;&gt;http://foxmail.com.cn/mac/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Calibre：电子书管理与转换，&lt;a href=&quot;http://calibre-ebook.com&quot;&gt;http://calibre-ebook.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Virtualbox：开源虚拟机软件，如果虚拟机用得不多，它就足够了，&lt;a href=&quot;https://www.virtualbox.org&quot;&gt;https://www.virtualbox.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -282,9 +581,7 @@
 
 &lt;p&gt;大成天下官网：&lt;a href=&quot;http://www.unnoo.com/&quot;&gt;http://www.unnoo.com/&lt;/a&gt;&lt;br&gt;
 填写基本要求即可试用：&lt;a href=&quot;http://www.unnoo.com/trialapp.html&quot;&gt;http://www.unnoo.com/trialapp.html&lt;/a&gt;&lt;br&gt;
-400电话：400-1122-918&lt;br&gt;
-微信实时咨询，号码：hacklook，或扫描下面的二维码
-&lt;img src=&quot;/gfx/posts/data-leak-prevention/hacklook.jpg&quot; alt=&quot;hacklook微信&quot; style=&quot;width: 20%; height: 20%&quot;/&gt;&lt;/p&gt;
+400电话：400-1122-918&lt;/p&gt;
 </content>
  </entry>
  

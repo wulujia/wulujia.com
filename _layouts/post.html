@@ -2,7 +2,7 @@
 layout: default
 ---
 <header>
-  <h1><a class="fadedlink" href="/" title="Home">&laquo;</a> {{ page.title }} <small>{{ page.date || date_to_string }}</small></h1>
+  <h1><a class="fadedlink" href="/" title="首页">&laquo;</a> {{ page.title }} <small>{{ page.date || date: "%Y-%m-%d" }}</small></h1>
 
   <nav>
     <ul class="clearfix">
@@ -16,7 +16,7 @@ layout: default
 <div id="post" role="main">
   {{ content }}
 
-  <p class="back">&laquo; <a href="/">Home</a></p>
+  <p class="back">&laquo; <a href="/">首页</a></p>
 </div>
 
 <!--h2>Related Posts</h2>

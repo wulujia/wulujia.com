@@ -81,7 +81,4 @@ categories: Security DLP
 
 大成天下官网：[http://www.unnoo.com/](http://www.unnoo.com/)  
 填写基本要求即可试用：[http://www.unnoo.com/trialapp.html](http://www.unnoo.com/trialapp.html)  
-400电话：400-1122-918  
-微信实时咨询，号码：hacklook，或扫描下面的二维码
-<img src="/gfx/posts/data-leak-prevention/hacklook.jpg" alt="hacklook微信" style="width: 20%; height: 20%"/>
-
+400电话：400-1122-918

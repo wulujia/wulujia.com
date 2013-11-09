@@ -1,4 +1,4 @@
 <li class="post">
-  <span class="date">{{ post.date | date_to_string }}</span>
+  <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 </li>
