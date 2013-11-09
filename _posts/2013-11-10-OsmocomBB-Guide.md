@@ -162,7 +162,7 @@ MS倾向信号强的BTS，使用哪种算法由基站决定，这也导致了可
 
 ccch_scan只是一个例子程序，用它并不能连接多个手机通讯——有人提出过同样的疑问，可以参考[链接1](http://comments.gmane.org/gmane.comp.mobile.osmocom.baseband.devel/2627)和[链接2](http://baseband-devel.722152.n3.nabble.com/About-sniff-multi-bursts-in-a-frame-CCCH-CONF-td3368272.html)。
 
-需要使用Sylvain Munaut的DSP Patch版本，git地址在：[http://cgit.osmocom.org/osmocom-bb/?h=sylvain/testing](http://cgit.osmocom.org/osmocom-bb/?h=sylvain/testing)。
+需要使用Sylvain Munaut的DSP Patch版本，git地址在：[http://cgit.osmocom.org/osmocom-bb/?h=sylvain%2Fburst_ind](http://cgit.osmocom.org/osmocom-bb/?h=sylvain%2Fburst_ind)。
 
 图：8台手机基本能够覆盖一个区域的基站。所以，有人在干活（感谢TK提供图片并对我玩OsmocomBB的指点）。
 
