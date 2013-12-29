@@ -58,7 +58,7 @@ categories: MAC SOFTWARE
 	- Mac下压缩中文名文件到Windows下会乱码，加密码压缩也比较麻烦，用Keka可以解决
 - The Unarchiver
 	- App Store，[http://wakaba.c3.cx/s/apps/unarchiver](http://wakaba.c3.cx/s/apps/unarchiver)
-	- 用于解压rar文件
+	- 用于解压rar、zip等压缩文件，系统自带的Archive Utility解压常有乱码
 
 # 聊天
 
@@ -72,6 +72,10 @@ categories: MAC SOFTWARE
 
 - Chrome：浏览器，[http://www.google.com/chrome/‎](http://www.google.com/chrome/‎)
 - Firefox：浏览器，[http://www.mozilla.org/](http://www.mozilla.org/)
+- Safari扩展
+	- Fastesttube：下载Youtube视频，[http://kwizzu.com](http://kwizzu.com)
+	- webclipper：印象笔记剪藏，[http://www.yinxiang.com/webclipper/](http://www.yinxiang.com/webclipper/)
+	- adblock：广告拦截，[https://getadblock.com](https://getadblock.com)
 
 # 安全
 
@@ -87,6 +91,20 @@ categories: MAC SOFTWARE
 - Thunder：迅雷下载，[http://mac.xunlei.com](http://mac.xunlei.com)
 - Filezilla：开源FTP客户端，[https://filezilla-project.org](https://filezilla-project.org)
 - Transmission：开源BT客户端，[http://www.transmissionbt.com](http://www.transmissionbt.com)
+
+# 库
+
+- FlashPlayer：[http://get.adobe.com/cn/flashplayer/](http://get.adobe.com/cn/flashplayer/)
+- Java：用到时系统会提示自动安装，[https://java.com/](https://java.com/)
+- XCode command line tool：用时会提示安装，官网[https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)
+
+# 其他
+
+- TeamViewer：远程协助，[http://www.teamviewer.com/](http://www.teamviewer.com/)
+- Skitch：印象笔记旗下的『圈点』，图片工具，[http://www.yinxiang.com/skitch/](http://www.yinxiang.com/skitch/)
+- Calibre：电子书管理与转换，[http://calibre-ebook.com](http://calibre-ebook.com)
+- Virtualbox：开源虚拟机软件，一般使用足够了，[https://www.virtualbox.org](https://www.virtualbox.org)
+- NameChanger：批量改名工具，[http://www.mrrsoftware.com/MRRSoftware/NameChanger.html](http://www.mrrsoftware.com/MRRSoftware/NameChanger.html)
 
 # 命令行
 
@@ -108,16 +126,3 @@ categories: MAC SOFTWARE
 	- [http://jekyllrb.com](http://jekyllrb.com)
 	- gem install jekyll
 	- 处理文本，用于发表博客
-
-# 库
-
-- FlashPlayer：[http://get.adobe.com/cn/flashplayer/](http://get.adobe.com/cn/flashplayer/)
-- Java：用到时系统会提示自动安装，[https://java.com/](https://java.com/)
-- XCode command line tool：用时会提示安装，官网[https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)
-
-# 其他
-
-- TeamViewer：远程协助，[http://www.teamviewer.com/](http://www.teamviewer.com/)
-- Skitch：印象笔记旗下的『圈点』，图片工具，[http://www.yinxiang.com/skitch/](http://www.yinxiang.com/skitch/)
-- Calibre：电子书管理与转换，[http://calibre-ebook.com](http://calibre-ebook.com)
-- Virtualbox：开源虚拟机软件，如果虚拟机用得不多，它就足够了，[https://www.virtualbox.org](https://www.virtualbox.org)

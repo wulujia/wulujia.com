@@ -4,13 +4,72 @@
  <title>NOTEPAD</title>
  <link href="http://feeds.feedburner.com/" rel="self"/>
  <link href="http://wulujia.com"/>
- <updated>2013-11-09T12:28:16+08:00</updated>
+ <updated>2013-12-30T01:09:43+08:00</updated>
  <id>http://wulujia.com</id>
  <author>
    <name>wulujia</name>
    <email>wulujia@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>手机安全APP：腾讯手机管家</title>
+   <link href="http://wulujia.com/2013/12/31/security-app-qqsecure"/>
+   <updated>2013-12-31T03:19:22+08:00</updated>
+   <id>http://wulujia.com/2013/12/31/security-app-qqsecure</id>
+   <content type="html">&lt;p&gt;启动画面的产品说明：手机安全管理先锋&lt;/p&gt;
+
+&lt;h1&gt;20131230 4.5.0&lt;/h1&gt;
+
+&lt;h2&gt;启动画面&lt;/h2&gt;
+
+&lt;p&gt;运行前的几页说明。与多数软件的右翻不同，是上翻页。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-01.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-02.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-03.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-04.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;h2&gt;功能项&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-05.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-06.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-07.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-08.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-09.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.5/qq4.5-10.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;h1&gt;20131220 4.4.0&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.4/qq4.4-01.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.4/qq4.4-02.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.4/qq4.4-03.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.4/qq4.4-04.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.4/qq4.4-05.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.4/qq4.4-06.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>手机安全APP：360手机卫士</title>
+   <link href="http://wulujia.com/2013/12/27/security-app-360"/>
+   <updated>2013-12-27T03:19:22+08:00</updated>
+   <id>http://wulujia.com/2013/12/27/security-app-360</id>
+   <content type="html"></content>
+ </entry>
  
  <entry>
    <title>OSMOCOMBB新手指南</title>
@@ -195,7 +254,7 @@ make&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;ccch_scan只是一个例子程序，用它并不能连接多个手机通讯——有人提出过同样的疑问，可以参考&lt;a href=&quot;http://comments.gmane.org/gmane.comp.mobile.osmocom.baseband.devel/2627&quot;&gt;链接1&lt;/a&gt;和&lt;a href=&quot;http://baseband-devel.722152.n3.nabble.com/About-sniff-multi-bursts-in-a-frame-CCCH-CONF-td3368272.html&quot;&gt;链接2&lt;/a&gt;。&lt;/p&gt;
 
-&lt;p&gt;需要使用Sylvain Munaut的DSP Patch版本，git地址在：&lt;a href=&quot;http://cgit.osmocom.org/osmocom-bb/?h=sylvain/testing&quot;&gt;http://cgit.osmocom.org/osmocom-bb/?h=sylvain/testing&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;需要使用Sylvain Munaut的DSP Patch版本，git地址在：&lt;a href=&quot;http://cgit.osmocom.org/osmocom-bb/?h=sylvain%2Fburst_ind&quot;&gt;http://cgit.osmocom.org/osmocom-bb/?h=sylvain%2Fburst_ind&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;图：8台手机基本能够覆盖一个区域的基站。所以，有人在干活（感谢TK提供图片并对我玩OsmocomBB的指点）。&lt;/p&gt;
 
@@ -387,7 +446,7 @@ make&lt;/p&gt;&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;App Store，&lt;a href=&quot;http://wakaba.c3.cx/s/apps/unarchiver&quot;&gt;http://wakaba.c3.cx/s/apps/unarchiver&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;用于解压rar文件&lt;/li&gt;
+&lt;li&gt;用于解压rar、zip等压缩文件，系统自带的Archive Utility解压常有乱码&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -412,6 +471,13 @@ make&lt;/p&gt;&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Chrome：浏览器，&lt;a href=&quot;http://www.google.com/chrome/%E2%80%8E&quot;&gt;http://www.google.com/chrome/‎&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Firefox：浏览器，&lt;a href=&quot;http://www.mozilla.org/&quot;&gt;http://www.mozilla.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Safari扩展
+
+&lt;ul&gt;
+&lt;li&gt;Fastesttube：下载Youtube视频，&lt;a href=&quot;http://kwizzu.com&quot;&gt;http://kwizzu.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;webclipper：印象笔记剪藏，&lt;a href=&quot;http://www.yinxiang.com/webclipper/&quot;&gt;http://www.yinxiang.com/webclipper/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;adblock：广告拦截，&lt;a href=&quot;https://getadblock.com&quot;&gt;https://getadblock.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1&gt;安全&lt;/h1&gt;
@@ -433,6 +499,24 @@ make&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Thunder：迅雷下载，&lt;a href=&quot;http://mac.xunlei.com&quot;&gt;http://mac.xunlei.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Filezilla：开源FTP客户端，&lt;a href=&quot;https://filezilla-project.org&quot;&gt;https://filezilla-project.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Transmission：开源BT客户端，&lt;a href=&quot;http://www.transmissionbt.com&quot;&gt;http://www.transmissionbt.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;库&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FlashPlayer：&lt;a href=&quot;http://get.adobe.com/cn/flashplayer/&quot;&gt;http://get.adobe.com/cn/flashplayer/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Java：用到时系统会提示自动安装，&lt;a href=&quot;https://java.com/&quot;&gt;https://java.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;XCode command line tool：用时会提示安装，官网&lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;https://developer.apple.com/xcode/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;其他&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TeamViewer：远程协助，&lt;a href=&quot;http://www.teamviewer.com/&quot;&gt;http://www.teamviewer.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Skitch：印象笔记旗下的『圈点』，图片工具，&lt;a href=&quot;http://www.yinxiang.com/skitch/&quot;&gt;http://www.yinxiang.com/skitch/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Calibre：电子书管理与转换，&lt;a href=&quot;http://calibre-ebook.com&quot;&gt;http://calibre-ebook.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Virtualbox：开源虚拟机软件，一般使用足够了，&lt;a href=&quot;https://www.virtualbox.org&quot;&gt;https://www.virtualbox.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NameChanger：批量改名工具，&lt;a href=&quot;http://www.mrrsoftware.com/MRRSoftware/NameChanger.html&quot;&gt;http://www.mrrsoftware.com/MRRSoftware/NameChanger.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1&gt;命令行&lt;/h1&gt;
@@ -468,23 +552,6 @@ make&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;gem install jekyll&lt;/li&gt;
 &lt;li&gt;处理文本，用于发表博客&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;库&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;FlashPlayer：&lt;a href=&quot;http://get.adobe.com/cn/flashplayer/&quot;&gt;http://get.adobe.com/cn/flashplayer/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Java：用到时系统会提示自动安装，&lt;a href=&quot;https://java.com/&quot;&gt;https://java.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;XCode command line tool：用时会提示安装，官网&lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;https://developer.apple.com/xcode/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;其他&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;TeamViewer：远程协助，&lt;a href=&quot;http://www.teamviewer.com/&quot;&gt;http://www.teamviewer.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Skitch：印象笔记旗下的『圈点』，图片工具，&lt;a href=&quot;http://www.yinxiang.com/skitch/&quot;&gt;http://www.yinxiang.com/skitch/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Calibre：电子书管理与转换，&lt;a href=&quot;http://calibre-ebook.com&quot;&gt;http://calibre-ebook.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Virtualbox：开源虚拟机软件，如果虚拟机用得不多，它就足够了，&lt;a href=&quot;https://www.virtualbox.org&quot;&gt;https://www.virtualbox.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -671,6 +738,33 @@ make&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;http://edition.cnn.com/2013/10/04/world/americas/silk-road-ross-ulbricht/&lt;/li&gt;
 &lt;li&gt;http://www.reuters.com/article/2013/10/02/us-crime-silkroad-raid-idUSBRE9910TR20131002&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>手机安全APP：金山手机毒霸</title>
+   <link href="http://wulujia.com/2013/11/04/security-app-duba"/>
+   <updated>2013-11-04T03:19:22+08:00</updated>
+   <id>http://wulujia.com/2013/11/04/security-app-duba</id>
+   <content type="html">&lt;h1&gt;细节&lt;/h1&gt;
+
+&lt;h1&gt;功能&lt;/h1&gt;
+
+&lt;h2&gt;一键体检&lt;/h2&gt;
+
+&lt;h2&gt;超级省电&lt;/h2&gt;
+
+&lt;h2&gt;应用行为管理&lt;/h2&gt;
+
+&lt;h2&gt;其他&lt;/h2&gt;
+
+&lt;h3&gt;骚扰拦截&lt;/h3&gt;
+
+&lt;h3&gt;支付保镖&lt;/h3&gt;
+
+&lt;h3&gt;二维码安全扫描&lt;/h3&gt;
+
+&lt;h2&gt;设置&lt;/h2&gt;
 </content>
  </entry>
  
