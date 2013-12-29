@@ -4,13 +4,40 @@
  <title>NOTEPAD</title>
  <link href="http://feeds.feedburner.com/" rel="self"/>
  <link href="http://wulujia.com"/>
- <updated>2013-12-30T01:09:43+08:00</updated>
+ <updated>2013-12-30T01:21:09+08:00</updated>
  <id>http://wulujia.com</id>
  <author>
    <name>wulujia</name>
    <email>wulujia@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>手机安全APP：小米安全中心</title>
+   <link href="http://wulujia.com/2013/12/31/security-app-xiaomi"/>
+   <updated>2013-12-31T03:19:22+08:00</updated>
+   <id>http://wulujia.com/2013/12/31/security-app-xiaomi</id>
+   <content type="html">&lt;p&gt;MIUI一直自带安全功能，从JLB 27.0开始，提供了一个名为『安全中心』的APP，将零散的安全功能集中起来。&lt;/p&gt;
+
+&lt;h1&gt;20131230 MIUI JLB 27.0稳定版&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_01.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_02.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_03.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_04.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_05.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_06.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_07.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_08.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_09.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_10.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_11.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_12.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_13.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_14.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;
+&lt;img src=&quot;/gfx/posts/android-secure-app-xiaomi/jlb27/miui_15.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>手机安全APP：腾讯手机管家</title>
@@ -61,14 +88,6 @@
 
 &lt;p&gt;&lt;img src=&quot;/gfx/posts/android-qqsecure/4.4/qq4.4-06.png&quot; style=&quot;width: 30%; height: 30%&quot;/&gt;&lt;/p&gt;
 </content>
- </entry>
- 
- <entry>
-   <title>手机安全APP：360手机卫士</title>
-   <link href="http://wulujia.com/2013/12/27/security-app-360"/>
-   <updated>2013-12-27T03:19:22+08:00</updated>
-   <id>http://wulujia.com/2013/12/27/security-app-360</id>
-   <content type="html"></content>
  </entry>
  
  <entry>
@@ -738,33 +757,6 @@ make&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;http://edition.cnn.com/2013/10/04/world/americas/silk-road-ross-ulbricht/&lt;/li&gt;
 &lt;li&gt;http://www.reuters.com/article/2013/10/02/us-crime-silkroad-raid-idUSBRE9910TR20131002&lt;/li&gt;
 &lt;/ul&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>手机安全APP：金山手机毒霸</title>
-   <link href="http://wulujia.com/2013/11/04/security-app-duba"/>
-   <updated>2013-11-04T03:19:22+08:00</updated>
-   <id>http://wulujia.com/2013/11/04/security-app-duba</id>
-   <content type="html">&lt;h1&gt;细节&lt;/h1&gt;
-
-&lt;h1&gt;功能&lt;/h1&gt;
-
-&lt;h2&gt;一键体检&lt;/h2&gt;
-
-&lt;h2&gt;超级省电&lt;/h2&gt;
-
-&lt;h2&gt;应用行为管理&lt;/h2&gt;
-
-&lt;h2&gt;其他&lt;/h2&gt;
-
-&lt;h3&gt;骚扰拦截&lt;/h3&gt;
-
-&lt;h3&gt;支付保镖&lt;/h3&gt;
-
-&lt;h3&gt;二维码安全扫描&lt;/h3&gt;
-
-&lt;h2&gt;设置&lt;/h2&gt;
 </content>
  </entry>
  
