@@ -12,10 +12,11 @@ end
 # rake ci msg="message"
 desc "commit"
 task :ci do
+  message = ENV['msg'] || "update blog"
   system "rake tags"
-  message = ENV['msg'] || "update"
+  system "git add ."
   system "git commit -a -m \"#{message}\""
-  system "git push"
+  system "git push origin gh-pages"
 end
 
 desc 'Generate tag pages'
