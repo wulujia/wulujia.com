@@ -24,7 +24,7 @@ MIUI一直自带安全功能，从JLB 27.0开始，提供了一个名为『安�
 <img src="/img/posts/android-secure-app-xiaomi/jlb27/miui_13.png" style="width: 30%; height: 30%"/>
 <img src="/img/posts/android-secure-app-xiaomi/jlb27/miui_14.png" style="width: 30%; height: 30%"/>
 <img src="/img/posts/android-secure-app-xiaomi/jlb27/miui_15.png" style="width: 30%; height: 30%"/>
-
+<img src="/img/posts/android-secure-app-xiaomi/jlb27/miui_16.png" style="width: 30%; height: 30%"/>
 
 
 
