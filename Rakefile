@@ -12,6 +12,7 @@ end
 # rake ci msg="message"
 desc "commit"
 task :ci do
+  system "rake tags"
   message = ENV['msg'] || "update"
   system "git commit -a -m \"#{message}\""
   system "git push"
