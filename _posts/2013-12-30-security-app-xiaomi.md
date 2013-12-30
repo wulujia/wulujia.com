@@ -7,6 +7,12 @@ categories: SECURITY MOBILE APP ANDROID XIAOMI
 
 MIUI一直自带安全功能，从JLB 27.0开始，提供了一个名为『安全中心』的APP，将零散的安全功能集中起来。
 
+# 小米安全中心的一些优点
+
+- 借用第三方资源：杀毒用腾讯，权限管理用LBE，清理用金山，自己做好用户体验；
+- 和系统结合紧密：比如安装软件时，可以直接对软件进行权限设置；
+- 默认通知栏就很『干净』；
+
 # 20131230 MIUI JLB 27.0稳定版
 
 <img src="/img/posts/android-secure-app-xiaomi/jlb27/miui_01.png" style="width: 30%; height: 30%"/>
