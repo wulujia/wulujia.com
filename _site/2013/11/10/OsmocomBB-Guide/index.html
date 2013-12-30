@@ -18,8 +18,10 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/syntax.css">
   <link rel="stylesheet" href="/css/disqus.css">
+  <link rel="stylesheet" href="/css/toc.css">
 
   <script src="/js/libs/modernizr-2.0.6.min.js"></script>
+  
 </head>
 
 <body>
@@ -42,8 +44,8 @@
     </ul>
   </nav>
 </header>
-
 <div id="post" role="main">
+
   <p>很多人可能知道，GSM通讯是可以被监听的。不过，我猜测，知道下面这几点的可能不多：</p>
 
 <ul>
@@ -77,7 +79,7 @@
 
 <p>A5/1与A5/2两个算法的设计后来被Marc Briceno、Ian Goldberg和David Wagner用逆向工程破解，下图是当年用于破解的设备：</p>
 
-<p><img src="/gfx/posts/osmocombb-guide/gsmclone.jpg" alt="当年用于破解的设备" style="width: 30%; height: 30%"/></p>
+<p><img src="/img/posts/osmocombb-guide/gsmclone.jpg" alt="当年用于破解的设备" style="width: 30%; height: 30%"/></p>
 
 <p>国内的GSM采用了什么算法呢……嗯……你试试就知道了……</p>
 
@@ -120,31 +122,31 @@
 <li>将firmware刷入手机</li>
 </ul>
 
-<p><img src="/gfx/posts/osmocombb-guide/mobile1.png" alt="将firmware刷入手机" style="width: 70%; height: 70%"/></p>
+<p><img src="/img/posts/osmocombb-guide/mobile1.png" alt="将firmware刷入手机" style="width: 70%; height: 70%"/></p>
 
 <ul>
 <li>扫描基站</li>
 </ul>
 
-<p><img src="/gfx/posts/osmocombb-guide/mobile2.png" alt="扫描基站" style="width: 70%; height: 70%"/></p>
+<p><img src="/img/posts/osmocombb-guide/mobile2.png" alt="扫描基站" style="width: 70%; height: 70%"/></p>
 
 <ul>
 <li>选择想要监听的基站并开始监听数据</li>
 </ul>
 
-<p><img src="/gfx/posts/osmocombb-guide/mobile3.png" alt="开始监听" style="width: 70%; height: 70%"/></p>
+<p><img src="/img/posts/osmocombb-guide/mobile3.png" alt="开始监听" style="width: 70%; height: 70%"/></p>
 
 <ul>
 <li>将监听数据写入本地cap包</li>
 </ul>
 
-<p><img src="/gfx/posts/osmocombb-guide/mobile4.png" alt="写入本地cap包" style="width: 70%; height: 70%"/></p>
+<p><img src="/img/posts/osmocombb-guide/mobile4.png" alt="写入本地cap包" style="width: 70%; height: 70%"/></p>
 
 <ul>
 <li>通过过滤程序过滤出监听到的短信（理论上话音一样能够被监听及解码，只是涉及技术更为复杂）</li>
 </ul>
 
-<p><img src="/gfx/posts/osmocombb-guide/mobile5.png" alt="过滤出监听到的短信" style="width: 70%; height: 70%"/></p>
+<p><img src="/img/posts/osmocombb-guide/mobile5.png" alt="过滤出监听到的短信" style="width: 70%; height: 70%"/></p>
 
 <hr>
 
@@ -226,7 +228,7 @@ make</p></li>
 
 <p>图：8台手机基本能够覆盖一个区域的基站。所以，有人在干活（感谢TK提供图片并对我玩OsmocomBB的指点）。</p>
 
-<p><img src="/gfx/posts/osmocombb-guide/mobile6.png" alt="同时接8台手机监听" style="width: 50%; height: 50%"/></p>
+<p><img src="/img/posts/osmocombb-guide/mobile6.png" alt="同时接8台手机监听" style="width: 50%; height: 50%"/></p>
 
 <h2>上行捕获</h2>
 
@@ -236,15 +238,15 @@ make</p></li>
 
 <p>替换前：</p>
 
-<p><img src="/gfx/posts/osmocombb-guide/motorola_filter_replacement_step_1_low.jpg" alt="替换前" style="width: 50%; height: 50%"/></p>
+<p><img src="/img/posts/osmocombb-guide/motorola_filter_replacement_step_1_low.jpg" alt="替换前" style="width: 50%; height: 50%"/></p>
 
 <p>摘掉后：</p>
 
-<p><img src="/gfx/posts/osmocombb-guide/motorola_filter_replacement_step_2_low.jpg" alt="摘掉后" style="width: 50%; height: 50%"/></p>
+<p><img src="/img/posts/osmocombb-guide/motorola_filter_replacement_step_2_low.jpg" alt="摘掉后" style="width: 50%; height: 50%"/></p>
 
 <p>替换后：</p>
 
-<p><img src="/gfx/posts/osmocombb-guide/motorola_filter_replacement_step_7_low.jpg" alt="替换后" style="width: 50%; height: 50%"/></p>
+<p><img src="/img/posts/osmocombb-guide/motorola_filter_replacement_step_7_low.jpg" alt="替换后" style="width: 50%; height: 50%"/></p>
 
 <h2>Some Tips</h2>
 
@@ -269,9 +271,9 @@ make</p></li>
 
 <p>贴两张图，信息量应该就够大了。</p>
 
-<p><img src="/gfx/posts/osmocombb-guide/mobile_spam.png" alt="垃圾短信" style="width: 50%; height: 50%"/></p>
+<p><img src="/img/posts/osmocombb-guide/mobile_spam.png" alt="垃圾短信" style="width: 50%; height: 50%"/></p>
 
-<p><img src="/gfx/posts/osmocombb-guide/gnuradio.png" alt="短信群发工具" style="width: 50%; height: 50%"/></p>
+<p><img src="/img/posts/osmocombb-guide/gnuradio.png" alt="短信群发工具" style="width: 50%; height: 50%"/></p>
 
 <h2>社工与窃密</h2>
 
@@ -316,7 +318,7 @@ make</p></li>
   <p class="back">&laquo; <a href="/">首页</a></p>
 </div>
 
-<!--h2>Related Posts</h2>
+<h2>相关</h2>
 <ul class="posts_list">
   
     <li class="post">
@@ -330,15 +332,15 @@ make</p></li>
 </li>
   
     <li class="post">
-  <span class="date">2013-11-05</span>
-  <a href="/2013/11/05/Mac-software-list" title="Mac优秀软件记录">Mac优秀软件记录</a>
+  <span class="date">2013-12-31</span>
+  <a href="/2013/12/31/security-app-cmcc" title="手机安全APP：手机安全先锋">手机安全APP：手机安全先锋</a>
 </li>
   
-</ul-->
+</ul>
 
 <hr/>
 
-<h2>Comments</h2>
+<h2>留言</h2>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
