@@ -18,10 +18,9 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/syntax.css">
   <link rel="stylesheet" href="/css/disqus.css">
-  <link rel="stylesheet" href="/css/toc.css">
 
   <script src="/js/libs/modernizr-2.0.6.min.js"></script>
-  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -46,11 +45,81 @@
     </ul>
   </nav>
 </header>
+
+<hr/>
+<script>
+// https://github.com/ghiculescu/jekyll-table-of-contents
+$(document).ready(function() {
+  var no_back_to_top_links = false
+
+  var headers = $('h1, h2, h3, h4, h5, h6').filter(function() {return this.id}), // get all headers with an ID
+      output = $('.toc');
+  if (!headers.length || headers.length < 3 || !output.length)
+    return;
+
+  var get_level = function(ele) { return parseInt(ele.nodeName.replace("H", ""), 10) }
+  var highest_level = headers.map(function(_, ele) { return get_level(ele) }).get().sort()[0]
+  // var return_to_top = '<i class="icon-arrow-up back-to-top"> ^ </i>'
+  var return_to_top = ''
+
+  var level = get_level(headers[0]), this_level, html = "<i></i> <ol>";
+  headers.on('click', function() {
+    if (!no_back_to_top_links) window.location.hash = this.id
+  }).addClass('clickable-header').each(function(_, header) {
+    this_level = get_level(header);
+    if (!no_back_to_top_links && this_level === highest_level) {
+      $(header).addClass('top-level-header').after(return_to_top)
+    }
+    if (this_level === level) // same level as before; same indenting
+      html += "<li><a href='#" + header.id + "'>" + header.innerHTML + "</a>";
+    else if (this_level < level) // higher level than before; end parent ol
+      html += "</li></ol></li><li><a href='#" + header.id + "'>" + header.innerHTML + "</a>";
+    else if (this_level > level) // lower level than before; expand the previous to contain a ol
+      html += "<ol><li><a href='#" + header.id + "'>" + header.innerHTML + "</a>";
+    level = this_level; // update for the next one
+  });
+  html += "</ol>";
+  if (!no_back_to_top_links) {
+    $(document).on('click', '.back-to-top', function() {
+      $(window).scrollTop(0)
+      window.location.hash = ''
+    })
+  }
+  output.hide().html(html).show('slow');
+});
+</script>
+<div class="toc"></div>
+
+
 <div id="post" role="main">
+  <h1 id="toc_0">20131231 4.3.8</h1>
 
-  <p>360手机卫士启动画面上的产品介绍：更安全来自于最专业</p>
+<ul>
+<li>启动画面上的产品介绍『我的手机我做主』，比起原来的『更安全来自于最专业』好多了；</li>
+<li>首页上的『手机清理』改成了『清理加速』，描述更清晰；</li>
+<li>首页加入『安全市场』捆绑安装——这算是应用宝和QQ、QZONE打通后，360的应手？</li>
+<li>超强模式看起来没那么重要，放到安全工具中了；</li>
+<li>安全工具中多了个手机抢票，快春节了，应景；</li>
+</ul>
 
-<h1>20131230 4.3.4</h1>
+<p><img src="/img/posts/android-secure-app-360/4.3.8/360-01.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-02.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-03.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-04.png" style="width: 30%; height: 30%"/></p>
+
+<p>上次没有对选项做截图，现在补上：</p>
+
+<p><img src="/img/posts/android-secure-app-360/4.3.8/360-05.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-06.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-07.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-08.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-09.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-10.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.8/360-11.png" style="width: 30%; height: 30%"/></p>
+
+<h1 id="toc_1">20131230 4.3.4</h1>
+
+<p>360手机卫士启动画面上的产品介绍：更安全来自于最专业</p>
 
 <p><img src="/img/posts/android-secure-app-360/4.3.4/360-01.png" style="width: 30%; height: 30%"/>
 <img src="/img/posts/android-secure-app-360/4.3.4/360-02.png" style="width: 30%; height: 30%"/>
@@ -73,8 +142,8 @@
 <img src="/img/posts/android-secure-app-360/4.3.4/360-19.png" style="width: 30%; height: 30%"/>
 <img src="/img/posts/android-secure-app-360/4.3.4/360-20.png" style="width: 30%; height: 30%"/>
 <img src="/img/posts/android-secure-app-360/4.3.4/360-21.png" style="width: 30%; height: 30%"/>
-<img src="/img/posts/android-secure-app-360/4.3.4/360-22.png" style="width: 30%; height: 30%"/></p>
-
+<img src="/img/posts/android-secure-app-360/4.3.4/360-22.png" style="width: 30%; height: 30%"/>
+<img src="/img/posts/android-secure-app-360/4.3.4/360-23.png" style="width: 30%; height: 30%"/></p>
 
   <p class="back">&laquo; <a href="/">首页</a></p>
 </div>
@@ -84,17 +153,17 @@
   
     <li class="post">
   <span class="date">2013-12-31</span>
-  <a href="/2013/12/31/security-app-xiaomi" title="手机安全APP：小米安全中心">手机安全APP：小米安全中心</a>
+  <a href="/2013/12/31/security-app-le" title="手机安全APP：联想乐安全">手机安全APP：联想乐安全</a>
 </li>
   
     <li class="post">
   <span class="date">2013-12-31</span>
-  <a href="/2013/12/31/security-app-qqsecure" title="手机安全APP：腾讯手机管家">手机安全APP：腾讯手机管家</a>
+  <a href="/2013/12/31/security-app-lbe" title="手机安全APP：LBE安全大师">手机安全APP：LBE安全大师</a>
 </li>
   
     <li class="post">
   <span class="date">2013-12-31</span>
-  <a href="/2013/12/31/security-app-cmcc" title="手机安全APP：手机安全先锋">手机安全APP：手机安全先锋</a>
+  <a href="/2013/12/31/security-app-kaspersky" title="手机安全APP：卡巴斯基">手机安全APP：卡巴斯基</a>
 </li>
   
 </ul>
@@ -120,7 +189,7 @@
 
     <footer>
       <span>wulujia </span>
-      <a class="fadedlink" href="mailto:wulujia@gmail.com"><img src="/gfx/gmail-logo.png" alt="@gmail"></a>
+      <a class="fadedlink" href="mailto:wulujia@gmail.com"><img src="/img/gmail-logo.png" alt="@gmail"></a>
     </footer>
   </div>
 

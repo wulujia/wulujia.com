@@ -5,7 +5,10 @@ permalink:    /:year/:month/:day/:title
 exclude:      ["CNAME", "Rakefile", "template.md"]
 title:        NOTEPAD
 description:  信息安全, DLP, 敏感信息防泄漏, 创业
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables","with_toc_data", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 url_root:     http://wulujia.com
 author:       wulujia
 author_email: wulujia@gmail.com
-disqus_id: wulujia
+disqus_id:    wulujia

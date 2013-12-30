@@ -18,10 +18,9 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/syntax.css">
   <link rel="stylesheet" href="/css/disqus.css">
-  <link rel="stylesheet" href="/css/toc.css">
 
   <script src="/js/libs/modernizr-2.0.6.min.js"></script>
-  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -44,8 +43,53 @@
     </ul>
   </nav>
 </header>
-<div id="post" role="main">
 
+<hr/>
+<script>
+// https://github.com/ghiculescu/jekyll-table-of-contents
+$(document).ready(function() {
+  var no_back_to_top_links = false
+
+  var headers = $('h1, h2, h3, h4, h5, h6').filter(function() {return this.id}), // get all headers with an ID
+      output = $('.toc');
+  if (!headers.length || headers.length < 3 || !output.length)
+    return;
+
+  var get_level = function(ele) { return parseInt(ele.nodeName.replace("H", ""), 10) }
+  var highest_level = headers.map(function(_, ele) { return get_level(ele) }).get().sort()[0]
+  // var return_to_top = '<i class="icon-arrow-up back-to-top"> ^ </i>'
+  var return_to_top = ''
+
+  var level = get_level(headers[0]), this_level, html = "<i></i> <ol>";
+  headers.on('click', function() {
+    if (!no_back_to_top_links) window.location.hash = this.id
+  }).addClass('clickable-header').each(function(_, header) {
+    this_level = get_level(header);
+    if (!no_back_to_top_links && this_level === highest_level) {
+      $(header).addClass('top-level-header').after(return_to_top)
+    }
+    if (this_level === level) // same level as before; same indenting
+      html += "<li><a href='#" + header.id + "'>" + header.innerHTML + "</a>";
+    else if (this_level < level) // higher level than before; end parent ol
+      html += "</li></ol></li><li><a href='#" + header.id + "'>" + header.innerHTML + "</a>";
+    else if (this_level > level) // lower level than before; expand the previous to contain a ol
+      html += "<ol><li><a href='#" + header.id + "'>" + header.innerHTML + "</a>";
+    level = this_level; // update for the next one
+  });
+  html += "</ol>";
+  if (!no_back_to_top_links) {
+    $(document).on('click', '.back-to-top', function() {
+      $(window).scrollTop(0)
+      window.location.hash = ''
+    })
+  }
+  output.hide().html(html).show('slow');
+});
+</script>
+<div class="toc"></div>
+
+
+<div id="post" role="main">
   <p>很多人可能知道，GSM通讯是可以被监听的。不过，我猜测，知道下面这几点的可能不多：</p>
 
 <ul>
@@ -56,7 +100,7 @@
 
 <hr>
 
-<h1>基础</h1>
+<h1 id="toc_0">基础</h1>
 
 <p>OSMOCOM-bb全称Open source mobile communication Baseband，是GSM协议栈的开源实现。开发团队的介绍文字是：</p>
 
@@ -71,7 +115,7 @@
 <p>In short: By using OsmocomBB on a compatible phone, you are able to make and receive phone calls, send and receive SMS, etc. based on Free Software only.</p>
 </blockquote>
 
-<h2>关于加密</h2>
+<h2 id="toc_1">关于加密</h2>
 
 <p>GSM加密采用A5算法。A5算法1989年由法国人开发，是一种序列密码，它是欧洲GSM标准中规定的加密算法，专用于数字蜂窝移动电话的加密，用于对从电话到基站连接的加密。A5的特点是效率高，适合硬件上高效实现。</p>
 
@@ -83,7 +127,7 @@
 
 <p>国内的GSM采用了什么算法呢……嗯……你试试就知道了……</p>
 
-<h2>一些名词</h2>
+<h2 id="toc_2">一些名词</h2>
 
 <ul>
 <li>MS：Mobile Station，移动终端；</li>
@@ -100,7 +144,7 @@
 <li>CCCH：Common Control CHannel，公共控制信道。是一种“一点对多点”的双向控制信道，其用途是在呼叫接续阶段，传输链路连接所需要的控制信令与信息。</li>
 </ul>
 
-<h2>手机开机时的位置更新过程</h2>
+<h2 id="toc_3">手机开机时的位置更新过程</h2>
 
 <ol>
 <li>MS（手机）向系统请求分配信令信道（SDCCH）；</li>
@@ -114,7 +158,7 @@
 
 <hr>
 
-<h1>使用方法演示</h1>
+<h1 id="toc_4">使用方法演示</h1>
 
 <p>用法很简单：</p>
 
@@ -150,9 +194,9 @@
 
 <hr>
 
-<h1>具体编译方法</h1>
+<h1 id="toc_5">具体编译方法</h1>
 
-<h2>预备</h2>
+<h2 id="toc_6">预备</h2>
 
 <p>这里我使用的Linux环境为ubuntu 12.04 x86（交叉环境不支持64位系统），其他系统方法一样，命令会有些差别，请自行分辨。</p>
 
@@ -170,7 +214,7 @@ make<br>
 sudo make install  </p></li>
 </ol>
 
-<h2>编译</h2>
+<h2 id="toc_7">编译</h2>
 
 <ul>
 <li><p>编译osmocom-bb.git，细节可以参考<a href="https://srlabs.de/gsm-map-tutorial/">https://srlabs.de/gsm-map-tutorial/</a></p>
@@ -178,13 +222,13 @@ sudo make install  </p></li>
 <ul>
 <li><p>下载代码到~/cell_logger</p>
 
-<p>mkdir -p ~/cell<em>logger<br>
-cd ~/cell</em>logger<br>
+<p>mkdir -p ~/cell_logger<br>
+cd ~/cell_logger<br>
 git clone git://git.osmocom.org/osmocom-bb.git</p></li>
 <li><p>下载ARM交叉编译环境</p>
 
-<p>wget http://gnuarm.com/bu-2.15<em>gcc-3.4.3-c-c++-java</em>nl-1.12.0<em>gi-6.1.tar.bz2<br>
-tar xf bu-2.15</em>gcc-3.4.3-c-c++-java<em>nl-1.12.0</em>gi-6.1.tar.bz2  </p></li>
+<p>wget <a href="http://gnuarm.com/bu-2.15_gcc-3.4.3-c-c++-java_nl-1.12.0_gi-6.1.tar.bz2">http://gnuarm.com/bu-2.15_gcc-3.4.3-c-c++-java_nl-1.12.0_gi-6.1.tar.bz2</a><br>
+tar xf bu-2.15_gcc-3.4.3-c-c++-java_nl-1.12.0_gi-6.1.tar.bz2  </p></li>
 <li><p>准备OsmocomBB&#39;s burst_ind branch</p>
 
 <p>cd ~/cell_logger/osmocom-bb<br>
@@ -197,19 +241,19 @@ make</p></li>
 </ul></li>
 </ul>
 
-<h2>执行</h2>
+<h2 id="toc_8">执行</h2>
 
 <ul>
 <li><p>连接手机，刷入firmware，不同设备需要刷入不同的firmware，这里的例子是针对Motorola C118的</p>
 
-<p>sudo ~/cell<em>logger/osmocom-bb/src/host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 ~/cell</em>logger/osmocom-bb/src/target/firmware/board/compal_e88/layer1.compalram.bin</p></li>
+<p>sudo ~/cell_logger/osmocom-bb/src/host/osmocon/osmocon -m c123xor -p /dev/ttyUSB0 ~/cell_logger/osmocom-bb/src/target/firmware/board/compal_e88/layer1.compalram.bin</p></li>
 <li><p>按一下手机开机键开机，确认进入osmocom-bb系统</p></li>
 <li><p>扫描基站</p>
 
-<p>sudo ~/cell<em>logger/osmocom-bb/src/host/layer23/src/misc/cell</em>log -O</p></li>
+<p>sudo ~/cell_logger/osmocom-bb/src/host/layer23/src/misc/cell_log -O</p></li>
 <li><p>监听某基站，例如31</p>
 
-<p>~/cell<em>logger/osmocom-bb/src/host/layer23/src/misc/ccch</em>scan -i 127.0.0.1 -a 31</p></li>
+<p>~/cell_logger/osmocom-bb/src/host/layer23/src/misc/ccch_scan -i 127.0.0.1 -a 31</p></li>
 <li><p>保存日志</p>
 
 <p>dumpcap -i lo -w ~/cell_logger/mobilelog/a.log</p></li>
@@ -218,9 +262,9 @@ make</p></li>
 
 <hr>
 
-<h1>其他</h1>
+<h1 id="toc_9">其他</h1>
 
-<h2>接多个手机</h2>
+<h2 id="toc_10">接多个手机</h2>
 
 <p>ccch_scan只是一个例子程序，用它并不能连接多个手机通讯——有人提出过同样的疑问，可以参考<a href="http://comments.gmane.org/gmane.comp.mobile.osmocom.baseband.devel/2627">链接1</a>和<a href="http://baseband-devel.722152.n3.nabble.com/About-sniff-multi-bursts-in-a-frame-CCCH-CONF-td3368272.html">链接2</a>。</p>
 
@@ -230,7 +274,7 @@ make</p></li>
 
 <p><img src="/img/posts/osmocombb-guide/mobile6.png" alt="同时接8台手机监听" style="width: 50%; height: 50%"/></p>
 
-<h2>上行捕获</h2>
+<h2 id="toc_11">上行捕获</h2>
 
 <p>参考链接：<a href="http://bb.osmocom.org/trac/wiki/Hardware/FilterReplacement">http://bb.osmocom.org/trac/wiki/Hardware/FilterReplacement</a></p>
 
@@ -248,26 +292,26 @@ make</p></li>
 
 <p><img src="/img/posts/osmocombb-guide/motorola_filter_replacement_step_7_low.jpg" alt="替换后" style="width: 50%; height: 50%"/></p>
 
-<h2>Some Tips</h2>
+<h2 id="toc_12">Some Tips</h2>
 
 <ol>
 <li>开机键不是长按，而是短按，否则就进入原系统了；</li>
 <li>CP210x的接线，RX和TX有可能需要对调；</li>
 <li>交叉编译要在i386系统，否则make的时候会“gnuarm-3.4.3/bin/arm-elf-gcc: No such file or directory”；</li>
-<li>检查连线是否正常，可以参考：http://bb.osmocom.org/trac/wiki/Hardware/CP210xTutorial，运行cp210x-program需要先安装ibusb-dev，如果输出是“No devices found”或“Unable to send request, 3709 result=-110”，则有问题。</li>
+<li>检查连线是否正常，可以参考：<a href="http://bb.osmocom.org/trac/wiki/Hardware/CP210xTutorial%EF%BC%8C%E8%BF%90%E8%A1%8Ccp210x-program%E9%9C%80%E8%A6%81%E5">http://bb.osmocom.org/trac/wiki/Hardware/CP210xTutorial，运行cp210x-program需要�</a>��安装ibusb-dev，如果输出是“No devices found”或“Unable to send request, 3709 result=-110”，则有问题。</li>
 </ol>
 
 <hr>
 
-<h1>坏人能用类似的技术做什么</h1>
+<h1 id="toc_13">坏人能用类似的技术做什么</h1>
 
-<h2>替用户订阅SP服务</h2>
+<h2 id="toc_14">替用户订阅SP服务</h2>
 
 <p>2007年，用户投诉都被盗打了XXX信息台和发送短信至XXX（手机钱包话费支付业务）的情况，且用户都统一被收取了该声讯台的包月费30元，通过话单梳理，全地区在该时间段内（从12月1日至10日）共有8000多用户被收取了包月费，根据业务支撑部门的统计，已超过了过该业务的正常业务量数倍多，属于不正常现象。</p>
 
 <p>这个案例是@tombkeeper在TSRC演讲的时候提到，我后来找他学习细节时知道的，可以参考链接<a href="http://www.leaffly.com/post/steal_calls_for_game.html">盗打购买游戏点卡的分析</a>。在2007年，就有人用这样的『高科技手段』挣钱，黑产真是不能小看。</p>
 
-<h2>群发垃圾广告</h2>
+<h2 id="toc_15">群发垃圾广告</h2>
 
 <p>贴两张图，信息量应该就够大了。</p>
 
@@ -275,7 +319,7 @@ make</p></li>
 
 <p><img src="/img/posts/osmocombb-guide/gnuradio.png" alt="短信群发工具" style="width: 50%; height: 50%"/></p>
 
-<h2>社工与窃密</h2>
+<h2 id="toc_16">社工与窃密</h2>
 
 <p>既然能够伪造短信，试想一下，如果有人：</p>
 
@@ -284,7 +328,7 @@ make</p></li>
 <li>在竞标、投标前期和现场伪造短信传递决策信息</li>
 </ul>
 
-<h2>其他</h2>
+<h2 id="toc_17">其他</h2>
 
 <ul>
 <li>短信、语音、gprs都是可窃听的，只是技术难度不同</li>
@@ -295,7 +339,7 @@ make</p></li>
 
 <hr>
 
-<h1>录像</h1>
+<h1 id="toc_18">录像</h1>
 
 <p>有个录像还是能看得比较清楚的：</p>
 
@@ -303,7 +347,7 @@ make</p></li>
 
 <hr>
 
-<h1>参考链接</h1>
+<h1 id="toc_19">参考链接</h1>
 
 <ul>
 <li>OsmocomBB项目官网：<a href="http://bb.osmocom.org">http://bb.osmocom.org</a></li>
@@ -314,7 +358,6 @@ make</p></li>
 <li>IMSI catcher：<a href="https://opensource.srlabs.de/projects/catcher/wiki">https://opensource.srlabs.de/projects/catcher/wiki</a></li>
 </ul>
 
-
   <p class="back">&laquo; <a href="/">首页</a></p>
 </div>
 
@@ -323,17 +366,17 @@ make</p></li>
   
     <li class="post">
   <span class="date">2013-12-31</span>
-  <a href="/2013/12/31/security-app-xiaomi" title="手机安全APP：小米安全中心">手机安全APP：小米安全中心</a>
+  <a href="/2013/12/31/security-app-360" title="手机安全APP：360卫士">手机安全APP：360卫士</a>
 </li>
   
     <li class="post">
   <span class="date">2013-12-31</span>
-  <a href="/2013/12/31/security-app-qqsecure" title="手机安全APP：腾讯手机管家">手机安全APP：腾讯手机管家</a>
+  <a href="/2013/12/31/security-app-le" title="手机安全APP：联想乐安全">手机安全APP：联想乐安全</a>
 </li>
   
     <li class="post">
   <span class="date">2013-12-31</span>
-  <a href="/2013/12/31/security-app-cmcc" title="手机安全APP：手机安全先锋">手机安全APP：手机安全先锋</a>
+  <a href="/2013/12/31/security-app-lbe" title="手机安全APP：LBE安全大师">手机安全APP：LBE安全大师</a>
 </li>
   
 </ul>
@@ -359,7 +402,7 @@ make</p></li>
 
     <footer>
       <span>wulujia </span>
-      <a class="fadedlink" href="mailto:wulujia@gmail.com"><img src="/gfx/gmail-logo.png" alt="@gmail"></a>
+      <a class="fadedlink" href="mailto:wulujia@gmail.com"><img src="/img/gmail-logo.png" alt="@gmail"></a>
     </footer>
   </div>
 
