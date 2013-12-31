@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  手机安全APP：金山手机毒霸
-date: 2014-01-01 19:19:22
+date: 2013-12-31 23:19:22
 categories: SECURITY MOBILE KINGSOFT DUBA
 ---
 
@@ -13,7 +13,7 @@ categories: SECURITY MOBILE KINGSOFT DUBA
 - 针对不同系统（比如MIUI）的特性做优化/提示；
 - 运营上做了一堆软件，对『炮灰级』软件不照顾用户体验，用来强推主打产品；
 
-# 20140101 3.3.0.1284
+# 20131231 3.3.0.1284
 
 首页『守护移动生活每一刻』，很贴切。
 
