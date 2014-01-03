@@ -48,6 +48,7 @@ jekyll serve
 # 参考
 
 - [Blogging Like a Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html)
+- [GitPage](http://pages.github.com/)
 - [Github Pages Help](https://help.github.com/categories/20/articles)
 - [Creating this blog by rafeca](http://rafeca.com/2011/11/09/creating-this-blog/)
 - [Jekyll-powered blogs and Source](https://github.com/mojombo/jekyll/wiki/Sites)
