@@ -50,7 +50,7 @@ body, button, input, select, textarea { font-family: 'Source Sans Pro', FreeSeri
    Links
    ========================================================================== */
 
-a { color: #d11e27; text-decoration: none; }
+a { color: #00a; text-decoration: none; }
 a:visited { color: #d11e27; }
 a:hover { color: #731115; text-decoration: underline; }
 a:focus { outline: thin dotted; }
