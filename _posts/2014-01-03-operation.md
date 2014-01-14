@@ -2,7 +2,7 @@
 layout: post
 title:  互联网产品的「运营」
 date: 2014-01-03 21:55:22
-categories: 运营
+categories: opertion internet marketing
 ---
 
 # 无题
