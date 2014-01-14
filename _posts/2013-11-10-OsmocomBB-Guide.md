@@ -191,7 +191,7 @@ ccch_scan只是一个例子程序，用它并不能连接多个手机通讯—�
 1. 开机键不是长按，而是短按，否则就进入原系统了；
 2. CP210x的接线，RX和TX有可能需要对调；
 3. 交叉编译要在i386系统，否则make的时候会“gnuarm-3.4.3/bin/arm-elf-gcc: No such file or directory”；
-4. 检查连线是否正常，可以参考：http://bb.osmocom.org/trac/wiki/Hardware/CP210xTutorial，运行cp210x-program需要先安装ibusb-dev，如果输出是“No devices found”或“Unable to send request, 3709 result=-110”，则有问题。
+4. 检查连线是否正常，可以参考：[CP210x Tutorial](http://bb.osmocom.org/trac/wiki/Hardware/CP210xTutorial)，运行cp210x-program需要先安装ibusb-dev，如果输出是“No devices found”或“Unable to send request, 3709 result=-110”，则有问题。
 
 ---
 

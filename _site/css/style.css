@@ -32,9 +32,9 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 16px; line-height: 1.4; }
+body { margin: 0; font-size: 14px; line-height: 1.4; }
 
-body, button, input, select, textarea { font-family: 'Source Sans Pro', FreeSerif, sans-serif; color: #3c3c3c; font-weight: 300; font-size: 18px; }
+body, button, input, select, textarea { font-family: 'Source Sans Pro', FreeSerif, sans-serif; color: #3c3c3c; font-weight: 300; font-size: 14px; }
 
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
