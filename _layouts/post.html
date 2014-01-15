@@ -7,7 +7,7 @@ layout: default
   <nav>
     <ul class="clearfix">
     {% for category in page.categories %}
-      <li><a href="/tag/{{ category }}.html">{{ category }}</a></li>
+      <a href="/tag/{{ category }}.html">{{ category }} <span class="badge">{{category.size}}</span></a>
     {% endfor %}
     </ul>
   </nav>

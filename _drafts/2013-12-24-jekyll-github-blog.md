@@ -61,7 +61,10 @@ jekyll serve
 
 http://jekyllrb.com/docs/pagination/
 
-## 分类	
+## 分类和标签
+
+效果参见：http://realjenius.com/cats_and_tags.html
+https://github.com/realjenius/realjenius.com	
 
 # 参考
 

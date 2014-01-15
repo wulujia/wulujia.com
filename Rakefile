@@ -36,7 +36,7 @@ title: wulujia.com
 ---
 <header>
   <h1><a class="fadedlink" href="/" title="Home">&laquo;</a> {{ site.title }}</h1>
-  <h2>Posts in category "#{category}"</h2>
+  <h2>标签 #{category} 下的内容：</h2>
 </header>
 
 <ul>

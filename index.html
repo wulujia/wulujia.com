@@ -5,8 +5,8 @@ layout: default
   <h1><a href="/">{{ site.title }}</a></h1>
 </head>
 <hr/>
-<h2><span>记录</span></h2>
 
+<h2><span>记录</span></h2>
 <!-- This loops through the paginated posts -->
 <ul>
   {% for post in paginator.posts %}
@@ -40,6 +40,16 @@ layout: default
   {% endif %}
 </div>
 {% endif %}
+
+<h2><span>标签</span></h2>
+<br>
+<nav>
+  <ul class="clearfix">
+  	{% for category in site.categories %}
+		<a href="/tag/{{category[0]}}.html">{{category[0]}} <span class="badge">{{category[1].size}}</span></a>             
+  	{% endfor %}
+  </ul>
+</nav>
 
 <h2>链接</h2>
 <ul>
