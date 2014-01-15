@@ -44,6 +44,24 @@ jekyll serve
 	git add .
 	git commit -a -m "update blog"
 	git push origin gh-pages
+	
+## Rakefile
+
+# 小技巧
+
+## 目录
+
+- jquery
+- js脚本
+- 在适当位置插入目录
+
+## Disqus留言
+
+## 博客分页
+
+http://jekyllrb.com/docs/pagination/
+
+## 分类	
 
 # 参考
 

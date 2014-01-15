@@ -32,7 +32,7 @@ task :tags do
     html << <<-HTML
 ---
 layout: default
-title: Thoughts by rafeca
+title: wulujia.com
 ---
 <header>
   <h1><a class="fadedlink" href="/" title="Home">&laquo;</a> {{ site.title }}</h1>
