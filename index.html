@@ -18,9 +18,9 @@ layout: default
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 上一页 &nbsp;&nbsp;</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&nbsp;&nbsp;&nbsp;&nbsp;&laquo; 上一页 &nbsp;&nbsp;</a>
   {% else %}
-    <span>&laquo; 上一页 &nbsp;&nbsp;</span>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&laquo; 上一页 &nbsp;&nbsp;</span>
   {% endif %}
 
   {% for page in (1.paginator.total_pages) %}
