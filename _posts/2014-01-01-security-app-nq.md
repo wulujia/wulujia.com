@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：网秦
 date: 2014-01-01 10:19:22
-categories: SECURITY MOBILE APP ANDROID NQ
+categories: SECURITY MOBILE APP ANDROID NETQIN
 ---
 
 # 总体感受
