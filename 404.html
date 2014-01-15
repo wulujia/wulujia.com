@@ -25,11 +25,19 @@
       <h1><a class="fadedlink" href="/" title="首页">&laquo;</a>NOTEPAD</h1>
     </head>
 
-    <h2>Sorry, this page does not exist :(</h2>
+    <h2>主人大概糊涂了，你在这找找有没有你想要的东西呗</h2>
+
+	<nav>
+	  <ul class="clearfix">
+	  	{% for category in site.categories %}
+			<a href="/tag/{{category[0]}}.html">{{category[0]}} <span class="badge">{{category[1].size}}</span></a>             
+	  	{% endfor %}
+	  </ul>
+	</nav>	
 
     <footer>
       <span>wulujia</span>
-      <a class="fadedlink" href="mailto:wulujia@gmail.com"><img src="/img/gmail-logo.png" alt="@gmail"></a>
+      <a href="tags.html">标签云</a>
     </footer>
   </div>
 
