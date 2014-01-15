@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：金山手机毒霸
 date: 2013-12-31 23:19:22
-categories: SECURITY MOBILE ANDROID KINGSOFT DUBA
+categories: SECURITY MOBILE ANDROID APP KINGSOFT DUBA
 ---
 
 # 总体感受

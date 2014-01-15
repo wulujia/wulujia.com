@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：腾讯手机管家
 date: 2013-12-30 19:19:22
-categories: SECURITY MOBILE APP ANDROID
+categories: SECURITY MOBILE APP ANDROID QQ TENCENT
 ---
 
 启动画面的产品说明：手机安全管理先锋
