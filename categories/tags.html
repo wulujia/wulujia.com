@@ -5,9 +5,7 @@ title: 标签
 <head>
   <h1><a href="/">{{ site.title }}</a></h1>
 </head>
-<hr/>
 
-<h2><span>分类</span></h2>
 <div class="clearfix">
 	{% for category in site.categories %}
 	<a href="/categories/{{category[0]}}.html">{{category[0]}} <span class="badge">{{category[1].size}}</span></a>       
