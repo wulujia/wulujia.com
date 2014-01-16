@@ -4,13 +4,20 @@ layout: default
 <head>
   <h1><a href="/">{{ site.title }}</a></h1>
 </head>
-<hr/>
+
+<div class="clearfix">
+	{% for category in site.categories %}
+	<a href="/categories/{{category[0]}}.html">{{category[0]}} <span class="badge">{{category[1].size}}</span></a>       
+	{% endfor %}
+</div>
 
 <h2><span>记录</span></h2>
 <!-- This loops through the paginated posts -->
 <ul>
   {% for post in paginator.posts %}
-    {% include post.html %}
+  <li class="post">
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
   {% endfor %}
 </ul>
 

@@ -2,7 +2,8 @@
 layout: post
 title:  说说后门
 date:   2013-11-02 19:19:22
-categories: Security Backdoor Router
+categories: tech
+tags: security backdoor router
 ---
 
 最近有两款路由器分别被爆出固件中存在后门。

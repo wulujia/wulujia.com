@@ -19,15 +19,15 @@ task :ci do
   system "git push origin gh-pages"
 end
 
-desc 'Generate tag pages'
+desc 'Generate tags pages'
 task :tags do
-  puts "Generating tag pages..."
+  puts "Generating tags pages..."
   require 'jekyll'
   
   options = Jekyll.configuration({})
   site = Jekyll::Site.new(options)
   site.read_posts('')
-  site.categories.sort.each do |category, posts|
+  site.tags.sort.each do |tag, posts|
     html = ''
     html << <<-HTML
 ---
@@ -36,19 +36,19 @@ title: wulujia.com
 ---
 <header>
   <h1><a class="fadedlink" href="/" title="Home">&laquo;</a> {{ site.title }}</h1>
-  <h2>标签 #{category} 下的内容：</h2>
+  <h2>标签 #{tag} 下的内容：</h2>
 </header>
 
 <ul>
-  {% for post in site.categories.#{category} %}
-    {% include post.html %}
+  {% for post in site.tags.#{tag} %}
+    <li><span>{{ post.date | date:"%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
     HTML
-    File.open("tag/#{category}.html", 'w+') do |file|
+    File.open("tags/#{tag}.html", 'w+') do |file|
       file.puts html
     end
-    puts "tag/#{category}.html generated!"
+    puts "tags/#{tag}.html generated!"
   end
   puts 'Done!'
 end

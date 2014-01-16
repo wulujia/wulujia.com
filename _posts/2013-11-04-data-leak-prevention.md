@@ -2,7 +2,8 @@
 layout: post
 title:  数据泄露的防范之道
 date: 2013-11-03 23:19:22
-categories: Security DLP
+categories: tech
+tags: security dlp
 ---
 
 十年前，数据泄露还只是少数人关注的话题，今天提起，却已成为路人皆知而且急需解决的大问题了。究其原因，还是外部环境的变化，主要体现在：
@@ -30,7 +31,7 @@ categories: Security DLP
 	- DLP存储扫描：扫描文件共享、WEB服务器、数据库等位置存储的敏感信息状况
 	- 终端APT监控：监控Windows终端操作，发现可疑入侵行为
 
-<img src="/img/posts/data-leak-prevention/dlpproduct.png" alt="大成天下数据防泄漏解决方案" style="width: 70%; height: 70%"/>
+<img src="/img/data-leak-prevention/dlpproduct.png" alt="大成天下数据防泄漏解决方案" style="width: 70%; height: 70%"/>
 
 # 加密产品（铁卷）
 
@@ -44,7 +45,7 @@ categories: Security DLP
 
 附图，铁卷的策略配置：
 
-<img src="/img/posts/data-leak-prevention/tiejuanpolicy.png" alt="铁卷策略配置" style="width: 70%; height: 70%"/>
+<img src="/img/data-leak-prevention/tiejuanpolicy.png" alt="铁卷策略配置" style="width: 70%; height: 70%"/>
 
 # 监控产品（锐眼）
 
@@ -59,15 +60,15 @@ categories: Security DLP
 
 所以我们花了两年时间，做了锐眼，锐眼的产品结构如下：
 
-<img src="/img/posts/data-leak-prevention/ruiyan.png" alt="锐眼产品结构" style="width: 70%; height: 70%"/>
+<img src="/img/data-leak-prevention/ruiyan.png" alt="锐眼产品结构" style="width: 70%; height: 70%"/>
 
 首页上显示的监控效果：
 
-<img src="/img/posts/data-leak-prevention/ruiyanindex.png" alt="锐眼首页" style="width: 70%; height: 70%"/>
+<img src="/img/data-leak-prevention/ruiyanindex.png" alt="锐眼首页" style="width: 70%; height: 70%"/>
 
 锐眼终端DLP捕获的数据：
 
-<img src="/img/posts/data-leak-prevention/ruiyanagent.png" alt="锐眼终端事件" style="width: 70%; height: 70%"/>
+<img src="/img/data-leak-prevention/ruiyanagent.png" alt="锐眼终端事件" style="width: 70%; height: 70%"/>
 
 # 大数据？
 
@@ -75,7 +76,7 @@ categories: Security DLP
 
 通过NOSQL等技术，我们得以快速检索海量数据，并将其可视化呈现：
 
-<img src="/img/posts/data-leak-prevention/bigdata.png" alt="海量数据分析" style="width: 70%; height: 70%"/>
+<img src="/img/data-leak-prevention/bigdata.png" alt="海量数据分析" style="width: 70%; height: 70%"/>
 
 # 联系方式
 

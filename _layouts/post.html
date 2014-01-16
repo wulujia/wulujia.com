@@ -6,14 +6,15 @@ layout: default
 
   <nav>
     <ul class="clearfix">
-    {% for category in page.categories %}
-      <li><a href="/tag/{{ category }}.html">{{ category }}</a></li>
+    {% for tag in page.tags %}
+      <li><a href="/tags/{{ tag }}.html">{{ tag }}</a></li>
     {% endfor %}
     </ul>
   </nav>
 </header>
 
 {% include toc.html %}
+
 <hr/>
 
 <div id="post" role="main">
@@ -24,7 +25,9 @@ layout: default
 <h2>相关</h2>
 <ul class="posts_list">
   {% for post in site.related_posts limit:3 %}
-    {% include post.html %}
+  <li class="post">
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
   {% endfor %}
 </ul>
 

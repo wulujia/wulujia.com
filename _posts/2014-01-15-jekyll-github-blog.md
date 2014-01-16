@@ -2,7 +2,8 @@
 layout: post
 title: 用jekyll和github写博客
 date: 2014-01-15 21:19:22
-categories: BLOG JEKYLL GITHUB
+categories: tech
+tags: blog jekyll github
 ---
 
 这些年写博客，用过免费博客平台（有的被墙，有的倒闭，有的被产品经理反人类的更新逼走……），也自架服务器用开源软件[Blosxom](http://muli.cc/)、[LifeType](http://lifetype.net/)、[Movable Type](http://movabletype.org/)、[WordPress](http://wordpress.org)、[fluxbb](http://fluxbb.org/)搭过。最近尝试用jekyll和github配合写博客，感觉不错，比较适合爱折腾人士和码农：
@@ -103,4 +104,4 @@ categories: BLOG JEKYLL GITHUB
 - [GitPage](http://pages.github.com/)
 - [Github Pages Help](https://help.github.com/categories/20/articles)
 - [Creating this blog by rafeca](http://rafeca.com/2011/11/09/creating-this-blog/)
-- [realjenius.com git source](- https://github.com/realjenius/realjenius.com)
+- [realjenius.com git source](https://github.com/realjenius/realjenius.com)

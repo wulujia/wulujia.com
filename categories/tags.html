@@ -1,0 +1,25 @@
+---
+layout: default
+title: 标签
+---
+<head>
+  <h1><a href="/">{{ site.title }}</a></h1>
+</head>
+<hr/>
+
+<h2><span>分类</span></h2>
+<div class="clearfix">
+	{% for category in site.categories %}
+	<a href="/categories/{{category[0]}}.html">{{category[0]}} <span class="badge">{{category[1].size}}</span></a>       
+	{% endfor %}
+</div>
+
+<h2><span>标签</span></h2>
+<br>
+<nav>
+  <ul class="clearfix">
+  	{% for tag in site.tags %}
+		<a href="/tags/{{tag[0]}}.html">{{tag[0]}} <span class="badge">{{tag[1].size}}</span></a>             
+  	{% endfor %}
+  </ul>
+</nav>

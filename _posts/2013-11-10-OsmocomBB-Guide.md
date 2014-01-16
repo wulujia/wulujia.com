@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  OSMOCOMBB新手指南
-categories: SECURITY MOBILE GSM OSMOCOMBB
+categories: tech
+tags: security mobile gsm osmocombb
 ---
 
 很多人可能知道，GSM通讯是可以被监听的。不过，我猜测，知道下面这几点的可能不多：
@@ -31,7 +32,7 @@ A5发展至今，有A5/1、A5/2、A5/3、A5/4、A5/5、A5/6、A5/7等7个版本�
 
 A5/1与A5/2两个算法的设计后来被Marc Briceno、Ian Goldberg和David Wagner用逆向工程破解，下图是当年用于破解的设备：
 
-<img src="/img/posts/osmocombb-guide/gsmclone.jpg" alt="当年用于破解的设备" style="width: 30%; height: 30%"/>
+<img src="/img/osmocombb-guide/gsmclone.jpg" alt="当年用于破解的设备" style="width: 30%; height: 30%"/>
 
 国内的GSM采用了什么算法呢……嗯……你试试就知道了……
 
@@ -68,23 +69,23 @@ MS倾向信号强的BTS，使用哪种算法由基站决定，这也导致了可
 
 - 将firmware刷入手机
 
-<img src="/img/posts/osmocombb-guide/mobile1.png" alt="将firmware刷入手机" style="width: 70%; height: 70%"/>
+<img src="/img/osmocombb-guide/mobile1.png" alt="将firmware刷入手机" style="width: 70%; height: 70%"/>
 
 - 扫描基站
 
-<img src="/img/posts/osmocombb-guide/mobile2.png" alt="扫描基站" style="width: 70%; height: 70%"/>
+<img src="/img/osmocombb-guide/mobile2.png" alt="扫描基站" style="width: 70%; height: 70%"/>
 
 - 选择想要监听的基站并开始监听数据
 
-<img src="/img/posts/osmocombb-guide/mobile3.png" alt="开始监听" style="width: 70%; height: 70%"/>
+<img src="/img/osmocombb-guide/mobile3.png" alt="开始监听" style="width: 70%; height: 70%"/>
 
 - 将监听数据写入本地cap包
 
-<img src="/img/posts/osmocombb-guide/mobile4.png" alt="写入本地cap包" style="width: 70%; height: 70%"/>
+<img src="/img/osmocombb-guide/mobile4.png" alt="写入本地cap包" style="width: 70%; height: 70%"/>
 
 - 通过过滤程序过滤出监听到的短信（理论上话音一样能够被监听及解码，只是涉及技术更为复杂）
 
-<img src="/img/posts/osmocombb-guide/mobile5.png" alt="过滤出监听到的短信" style="width: 70%; height: 70%"/>
+<img src="/img/osmocombb-guide/mobile5.png" alt="过滤出监听到的短信" style="width: 70%; height: 70%"/>
 
 ---
 
@@ -166,7 +167,7 @@ ccch_scan只是一个例子程序，用它并不能连接多个手机通讯—�
 
 图：8台手机基本能够覆盖一个区域的基站。所以，有人在干活（感谢TK提供图片并对我玩OsmocomBB的指点）。
 
-<img src="/img/posts/osmocombb-guide/mobile6.png" alt="同时接8台手机监听" style="width: 50%; height: 50%"/>
+<img src="/img/osmocombb-guide/mobile6.png" alt="同时接8台手机监听" style="width: 50%; height: 50%"/>
 
 ## 上行捕获
 
@@ -176,15 +177,15 @@ ccch_scan只是一个例子程序，用它并不能连接多个手机通讯—�
 
 替换前：
 
-<img src="/img/posts/osmocombb-guide/motorola_filter_replacement_step_1_low.jpg" alt="替换前" style="width: 50%; height: 50%"/>
+<img src="/img/osmocombb-guide/motorola_filter_replacement_step_1_low.jpg" alt="替换前" style="width: 50%; height: 50%"/>
 
 摘掉后：
 
-<img src="/img/posts/osmocombb-guide/motorola_filter_replacement_step_2_low.jpg" alt="摘掉后" style="width: 50%; height: 50%"/>
+<img src="/img/osmocombb-guide/motorola_filter_replacement_step_2_low.jpg" alt="摘掉后" style="width: 50%; height: 50%"/>
 
 替换后：
 
-<img src="/img/posts/osmocombb-guide/motorola_filter_replacement_step_7_low.jpg" alt="替换后" style="width: 50%; height: 50%"/>
+<img src="/img/osmocombb-guide/motorola_filter_replacement_step_7_low.jpg" alt="替换后" style="width: 50%; height: 50%"/>
 
 ## Some Tips
 
@@ -207,9 +208,9 @@ ccch_scan只是一个例子程序，用它并不能连接多个手机通讯—�
 
 贴两张图，信息量应该就够大了。
 
-<img src="/img/posts/osmocombb-guide/mobile_spam.png" alt="垃圾短信" style="width: 50%; height: 50%"/>
+<img src="/img/osmocombb-guide/mobile_spam.png" alt="垃圾短信" style="width: 50%; height: 50%"/>
 
-<img src="/img/posts/osmocombb-guide/gnuradio.png" alt="短信群发工具" style="width: 50%; height: 50%"/>
+<img src="/img/osmocombb-guide/gnuradio.png" alt="短信群发工具" style="width: 50%; height: 50%"/>
 
 ## 社工与窃密
 

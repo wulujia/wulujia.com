@@ -2,7 +2,8 @@
 layout: post
 title:  Mac优秀软件记录
 date: 2013-11-04 19:19:22
-categories: MAC SOFTWARE
+categories: record
+tags: mac software
 ---
 
 记录一些不错的Mac软件清单，适用OS X 10.9 Mavericks。
