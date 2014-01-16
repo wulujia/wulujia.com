@@ -81,7 +81,7 @@ tags: blog jekyll github
 文章内容一旦多了，总得有点分类才能更清晰一些，效果参见：
 
 - http://realjenius.com/cats_and_tags.html
-- http://wulujia.com/tags.html
+- http://wulujia.com/categories/tags.html
 
 参考文章：http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/
 
