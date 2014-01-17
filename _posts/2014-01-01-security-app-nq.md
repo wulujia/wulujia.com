@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：网秦
 date: 2014-01-01 10:19:22
-categories: record
+categories: product
 tags: security mobile app android netqin
 ---
 

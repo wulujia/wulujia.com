@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：迈克菲
 date: 2013-12-31 00:19:22
-categories: record
+categories: product
 tags: security mobile app android mcafee
 ---
 

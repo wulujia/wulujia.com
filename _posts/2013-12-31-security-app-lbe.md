@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：LBE安全大师
 date: 2013-12-31 19:19:22
-categories: record
+categories: product
 tags: security mobile app android lbe
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：安全管家
 date: 2013-12-31 15:19:22
-categories: record
+categories: product
 tags: security mobile app android anguanjia
 ---
 

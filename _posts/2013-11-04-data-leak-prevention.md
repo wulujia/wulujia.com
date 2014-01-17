@@ -2,8 +2,8 @@
 layout: post
 title:  数据泄露的防范之道
 date: 2013-11-03 23:19:22
-categories: tech
-tags: security dlp
+categories: unnoo
+tags: security dlp encrypt
 ---
 
 十年前，数据泄露还只是少数人关注的话题，今天提起，却已成为路人皆知而且急需解决的大问题了。究其原因，还是外部环境的变化，主要体现在：

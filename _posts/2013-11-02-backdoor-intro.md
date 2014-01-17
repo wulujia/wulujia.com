@@ -2,7 +2,7 @@
 layout: post
 title:  说说后门
 date:   2013-11-02 19:19:22
-categories: tech
+categories: misc
 tags: security backdoor router
 ---
 

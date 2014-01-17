@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：小米安全中心
 date: 2013-12-30 19:19:22
-categories: record
+categories: product
 tags: security mobile app android xiaomi
 ---
 

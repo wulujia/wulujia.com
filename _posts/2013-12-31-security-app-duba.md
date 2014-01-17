@@ -2,7 +2,7 @@
 layout: post
 title:  手机安全APP：金山手机毒霸
 date: 2013-12-31 23:19:22
-categories: record
+categories: product
 tags: security mobile app android kingsoft duba
 ---
 
