@@ -8,7 +8,7 @@ tags: security ciphercloud cloud
 
 # 简介
 
-[CipherCloud](http://www.ciphercloud.com/)成立于2010年，CipherCloud提供的是云网关，在客户数据被发送到云端前对其进行实时加密，数据在客户本地进行，然后才被传到云端。而密钥则放在客户端，所以即便云供应商也无法看到这些数据。
+[CipherCloud](http://www.ciphercloud.com/)成立于2010年，CipherCloud提供的是云网关，在客户数据被发送到云端前对其进行实时加密，数据在客户本地进行，然后才被传到云端。而[密钥由客户管理](http://www.ciphercloud.com/technologies/key-management/)，所以云供应商无法看到用户数据。
 
 截至2012年底，CipherCloud已经累计了120万个用户和40个客户，其中包含了两个世界顶级银行。截至2014年初，在CipherCloud首页上看到的用户数为242万。
 
