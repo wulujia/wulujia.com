@@ -5,6 +5,7 @@ task :default => :server
 
 desc "server"
 task :server do
+  system "rake tags"
   system "start http://localhost:4000/"
   system "jekyll serve --watch"
 end
