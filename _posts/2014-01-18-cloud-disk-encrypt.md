@@ -102,6 +102,25 @@ Boxcryptor的密钥管理中有这么几种密钥：
 
 这种方案目前缺乏的是「共享」功能。
 
+# 市场
+
+用App Annie分析几个第三方加密App在市场上的占有率，并不容乐观：
+
+## Boxcryptor
+
+<img src="/img/cloud-disk-encrypt/boxcryptor_3.png" style="width: 50%; height: 50%"/>
+<img src="/img/cloud-disk-encrypt/boxcryptor_4.png" style="width: 50%; height: 50%"/>
+
+## Viivo
+
+<img src="/img/cloud-disk-encrypt/viivo_4.png" style="width: 50%; height: 50%"/>
+<img src="/img/cloud-disk-encrypt/viivo_5.png" style="width: 50%; height: 50%"/>
+
+## Safemonk
+
+<img src="/img/cloud-disk-encrypt/safemonk_1.png" style="width: 50%; height: 50%"/>
+<img src="/img/cloud-disk-encrypt/safemonk_2.png" style="width: 50%; height: 50%"/>
+
 # 云盘加密需要思考的问题
 
 这些问题见仁见智，没有标准答案，认为自己想清楚了，就试试呗。
@@ -113,6 +132,7 @@ Boxcryptor的密钥管理中有这么几种密钥：
 5. 主要技术有哪些？
 6. 移动场景下，加密会带来哪些困扰？
 7. 加密有没有互联网玩法，怎样带进更多用户？
+8. 为什么现有云盘加密产品用户这么少？
 
 # 提供API接口的网盘
 
