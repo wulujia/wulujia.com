@@ -11,7 +11,7 @@ layout: default
 <h2><span>分类</span></h2>
 <div class="clearfix">
 	{% for category in site.categories %}
-	<a href="/categories/{{category[0]}}.html">{{category[0]}} <span class="badge">{{category[1].size}}</span></a>       
+	<a href="/categories/{{category[0]}}.html">{{category[0]}} <span class="badge">{{category[1].size}}</span></a>&nbsp;&nbsp;&nbsp;       
 	{% endfor %}
 </div>
 
@@ -20,7 +20,7 @@ layout: default
 <nav>
   <ul class="clearfix">
   	{% for tag in site.tags %}
-		<a href="/tags/{{tag[0]}}.html">{{tag[0]}} <span class="badge">{{tag[1].size}}</span></a>             
+		<a href="/tags/{{tag[0]}}.html">{{tag[0]}} <span class="badge">{{tag[1].size}}</span></a>&nbsp;&nbsp;&nbsp;             
   	{% endfor %}
   </ul>
 </nav>
