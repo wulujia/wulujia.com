@@ -2,7 +2,7 @@
 layout: post
 title:  数据泄露的防范之道
 date: 2013-11-03 23:19:22
-categories: unnoo
+categories: tech
 tags: security dlp encrypt
 ---
 

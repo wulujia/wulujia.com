@@ -1,0 +1,20 @@
+---
+layout: default
+title: wulujia.com
+---
+<head>
+  <h1><a href="/">{{ site.title }}</a></h1>
+</head>
+
+<div class="clearfix">
+	{% for category in site.categories %}
+	<a href="/categories/{{category[0]}}.html">{{category[0]}} <span class="badge">{{category[1].size}}</span></a>&nbsp;&nbsp;&nbsp;       
+	{% endfor %}
+</div>
+
+<h2><span>标签为 virtualization 的文章</span></h2>
+<ul>
+  {% for post in site.tags.virtualization %}
+    <li><span>{{ post.date | date:"%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
