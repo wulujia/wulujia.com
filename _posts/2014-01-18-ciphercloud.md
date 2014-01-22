@@ -58,7 +58,7 @@ CipherCloud的产品主要有针对Salesforce、Office365、Box、Gmail、Amazon
 投资人包括Andreessen Horowitz、Index Ventures、T-Systems。
 
 - 2010年：种子投资140 万美元；
-- 2012年12月，3000万美元。
+- 2012年12月：3000万美元。
 
 # 其他
 
