@@ -106,6 +106,7 @@ tags: mac software
 - Calibre：电子书管理与转换，[http://calibre-ebook.com](http://calibre-ebook.com)
 - Virtualbox：开源虚拟机软件，一般使用足够了，[https://www.virtualbox.org](https://www.virtualbox.org)
 - NameChanger：批量改名工具，[http://www.mrrsoftware.com/MRRSoftware/NameChanger.html](http://www.mrrsoftware.com/MRRSoftware/NameChanger.html)
+- Readkit：RSS阅读工具，商业软件，[http://readkitapp.com/](http://readkitapp.com/)
 
 # 命令行
 
