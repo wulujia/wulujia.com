@@ -27,7 +27,7 @@ tags: mac software
 	- 思维导图工具
 - OmniFocus & OmniGraffle
 	- 商业软件，[http://www.omnigroup.com](http://www.omnigroup.com)
-	- OminiFocus是时间管理工具
+	- OminiFocus是时间管理工具（用过一段时间，现在废弃了，直接用系统自带的Calendar和Reminders）
 	- OmniGraffle是画图工具
 - Balsamiq Mockups
 	- 商业软件，[http://balsamiq.com/products/mockups](http://balsamiq.com/products/mockups)
@@ -84,6 +84,11 @@ tags: mac software
 	- webclipper：印象笔记剪藏，[http://www.yinxiang.com/webclipper/](http://www.yinxiang.com/webclipper/)
 	- adblock：广告拦截，[https://getadblock.com](https://getadblock.com)
 
+# 阅读
+
+- Readkit：RSS阅读工具，商业软件，[http://readkitapp.com/](http://readkitapp.com/)
+- Pocket：稍后阅读，典型场景是看到好网页存起来，手机上慢慢看，真好的，再发进印象笔记。可以在App Store下载。官网[http://getpocket.com/a/](http://getpocket.com/)
+
 # 安全
 
 - TrueCrypt：硬盘加密，[http://www.truecrypt.org](http://www.truecrypt.org)
@@ -112,7 +117,6 @@ tags: mac software
 - Calibre：电子书管理与转换，[http://calibre-ebook.com](http://calibre-ebook.com)
 - Virtualbox：开源虚拟机软件，一般使用足够了，[https://www.virtualbox.org](https://www.virtualbox.org)
 - NameChanger：批量改名工具，[http://www.mrrsoftware.com/MRRSoftware/NameChanger.html](http://www.mrrsoftware.com/MRRSoftware/NameChanger.html)
-- Readkit：RSS阅读工具，商业软件，[http://readkitapp.com/](http://readkitapp.com/)
 
 # 命令行
 
