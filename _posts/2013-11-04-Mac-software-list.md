@@ -73,6 +73,7 @@ tags: mac software
 
 - Chrome：浏览器，[http://www.google.com/chrome/‎](http://www.google.com/chrome/‎)，另外推荐几个Chrome扩展或userscript：
 	- [Download YouTube Videos as MP4](http://userscripts.org/scripts/show/25105)
+	- [Kindle Library Powerpack](http://userscripts.org/scripts/show/130289)
 	- [Adblock](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom)
 	- [Flv Downloader](https://chrome.google.com/webstore/detail/lfmhcpmkbdkbgbmkjoiopeeegenkdikp)
 	- [Pocket](https://chrome.google.com/webstore/detail/niloccemoadcdkdjlinkgdfekeahmflj)
