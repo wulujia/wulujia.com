@@ -118,6 +118,7 @@ tags: mac software
 - Calibre：电子书管理与转换，[http://calibre-ebook.com](http://calibre-ebook.com)
 - Virtualbox：开源虚拟机软件，一般使用足够了，[https://www.virtualbox.org](https://www.virtualbox.org)
 - NameChanger：批量改名工具，[http://www.mrrsoftware.com/MRRSoftware/NameChanger.html](http://www.mrrsoftware.com/MRRSoftware/NameChanger.html)
+- Apptrap：卸载软件时可以自动提醒删除关联文件的小工具，http://onnati.net/apptrap/
 
 # 命令行
 
