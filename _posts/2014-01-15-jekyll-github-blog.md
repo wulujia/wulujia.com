@@ -31,7 +31,7 @@ tags: blog jekyll github
 
 # github
 
-全球最大的源代码托管平台，如果不了解，可以参考：https://help.github.com/。
+全球最大的源代码托管平台，如果不了解，可以参考：[https://help.github.com/](https://help.github.com/)。
 
 ## 准备工作
 

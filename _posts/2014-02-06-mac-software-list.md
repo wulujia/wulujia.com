@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  Mac优秀软件记录
-date: 2013-11-04 19:19:22
+date: 2014-02-06 19:19:22
 categories: product
 tags: mac software
 ---
 
-记录一些不错的Mac软件清单，适用OS X 10.9 Mavericks。
+记录一些我自己认为不错的Mac软件，适用OS X 10.9 Mavericks。也可以参考页面：[https://github.com/hzlzh/Best-App](https://github.com/hzlzh/Best-App)。
 
 # 办公相关
 
