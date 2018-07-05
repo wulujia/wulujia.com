@@ -5,9 +5,7 @@ permalink:      /:year/:month/:day/:title
 exclude:        ["CNAME", "Rakefile", "template.md", "Gemfile.lock", "Gemfile", ".DS_Store"]
 title:          notepad
 description:    知识星球, 小密圈, 圈子, 亲密社交, 连接一千位铁杆粉丝, 信息安全, DLP, 敏感信息防泄漏, 移动互联网, 创业
-markdown:       redcarpet
-redcarpet:
-  extensions:   ["tables","with_toc_data", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+markdown: 	kramdown
 url_root:       http://wulujia.com
 author:         wulujia
 author_email:   wulujia@gmail.com
