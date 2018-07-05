@@ -29,6 +29,8 @@ tags: blog jekyll github
 	~/my-awesome-site $ jekyll serve
 	# => Now browse to http://localhost:4000
 
+在 Mac 上，需要先下载安装 [Command Line Tool](https://developer.apple.com/download/)。
+
 # github
 
 全球最大的源代码托管平台，如果不了解，可以参考：[https://help.github.com/](https://help.github.com/)。
@@ -96,6 +98,18 @@ tags: blog jekyll github
 ## 直接fork别人的源代码来使用
 
 [Jekyll-powered blogs and Source](https://github.com/mojombo/jekyll/wiki/Sites)是一些使用Jekyll的博客，你可以看看哪个人的网站最顺眼，直接使用他们的代码呗 :)
+
+使用第三方 theme 时，可能需要解决依赖关系
+
+gem install bundler
+bundle install
+
+## 使用自己的域名 & HTTPS
+
+参考如下链接：
+
+- https://help.github.com/articles/setting-up-an-apex-domain/
+- https://help.github.com/articles/securing-your-github-pages-site-with-https/
 
 # 参考
 
