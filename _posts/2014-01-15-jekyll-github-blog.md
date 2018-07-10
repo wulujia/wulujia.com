@@ -101,8 +101,8 @@ tags: blog jekyll github
 
 使用第三方 theme 时，可能需要解决依赖关系
 
-> gem install bundler
-> bundle install
+	gem install bundler
+	bundle install
 
 ## 使用自己的域名 & HTTPS
 

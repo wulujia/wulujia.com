@@ -1,12 +1,14 @@
-safe:           true
-paginate:       20
-paginate_path:  "page:num"
-permalink:      /:year/:month/:day/:title
-exclude:        ["CNAME", "Rakefile", "template.md", "Gemfile.lock", "Gemfile", ".DS_Store"]
 title:          notepad
 description:    知识星球, 小密圈, 圈子, 亲密社交, 连接一千位铁杆粉丝, 信息安全, DLP, 敏感信息防泄漏, 移动互联网, 创业
+plugins:
+  - jekyll-paginate
+  - jekyll-category-pages
+paginate:       8
+paginate_path: "/pages/page:num/"
+permalink:      /:year/:month/:day/:title
+exclude:        ["CNAME", "Rakefile", "template.md", "Gemfile.lock", "Gemfile", ".DS_Store"]
 markdown: 	kramdown
-url_root:       http://wulujia.com
+url_root:       https://wulujia.com
 author:         wulujia
 author_email:   wulujia@gmail.com
 disqus_id:      wulujia
