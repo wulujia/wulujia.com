@@ -23,10 +23,10 @@ tags: blog jekyll github
 
 使用[jekyll](http://jekyllrb.com/)，你可以写markdown格式的文章，方便快捷地根据模板生成漂亮的网站或博客。Linux或者Mac平台下，使用非常简单：
 
-	~ $ gem install jekyll
+	~ $ gem install bundle jekyll
 	~ $ jekyll new my-awesome-site
 	~ $ cd my-awesome-site
-	~/my-awesome-site $ jekyll serve
+	~/my-awesome-site $ bundle exec jekyll serve
 	# => Now browse to http://localhost:4000
 
 在 Mac 上，需要先下载安装 [Command Line Tool](https://developer.apple.com/download/)。

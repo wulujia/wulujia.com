@@ -30,6 +30,7 @@ GEM
     jekyll-category-pages (1.0.0)
       jekyll (~> 3.5)
       jekyll-paginate (~> 1.1, >= 1.0.0)
+    jekyll-multiple-languages (2.0.3)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -62,8 +63,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (= 3.8.3)
+  jekyll (~> 3.8.3)
   jekyll-category-pages
+  jekyll-multiple-languages
   jekyll-paginate
   rake
 

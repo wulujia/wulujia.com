@@ -12,3 +12,4 @@ url_root:       https://wulujia.com
 author:         wulujia
 author_email:   wulujia@gmail.com
 disqus_id:      wulujia
+js: 		false
