@@ -2,7 +2,7 @@
 layout: post
 title:  铁卷电子文档安全系统 FAQ
 categories: tech
-tags: SECURITY DLP ENCRYPT TIEJUAN
+tags: security dlp encrypt
 ---
 
 更新历史  

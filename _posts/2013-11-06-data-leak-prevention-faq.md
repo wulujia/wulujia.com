@@ -3,7 +3,7 @@ layout: post
 title:  敏感信息防泄露常见问题
 date: 2013-11-06 19:19:22
 categories: tech
-tags: SECURITY DLP
+tags: security dlp
 ---
 
 更新历史  
