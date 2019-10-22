@@ -31,6 +31,8 @@ tags: blog jekyll github
 
 在 Mac 上，需要先下载安装 [Command Line Tool](https://developer.apple.com/download/)。
 
+如果之前安装过，但是很久没更新，可以 bundle update 一下。
+
 # github
 
 全球最大的源代码托管平台，如果不了解，可以参考：[https://help.github.com/](https://help.github.com/)。

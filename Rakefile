@@ -23,7 +23,9 @@ end
 desc 'Generate tags pages'
 task :tags do
   puts "Generating tags pages..."
+  require 'rubygems'
   require 'jekyll'
+  include Jekyll::Filters
   
   options = Jekyll.configuration({})
   site = Jekyll::Site.new(options)
