@@ -25,6 +25,8 @@ tags: book film gear
 
 ## 操作过程
 
+<img src="/img/view-camera/viewcaneraprocess.png" alt="大画幅拍摄流程" style="width: 50%; height: 50%"/>
+
 * 大画幅就是要仔细拍摄，从开始就追求高质量，不怕慢
 * 第一关是装片，重点就是：胶片上有个豁口，确保豁口在右下角，装进片盒，插上插刀即可，每个片盒能拍两张。安装 4x5 底片进片盒，可以看一下视频：https://www.youtube.com/watch?v=NEvRc4qvfGY
 * 将胶片装进冲洗罐时也需要注意，如果一次冲洗 6 张，不要摸黑装重叠了，会冲洗失败
