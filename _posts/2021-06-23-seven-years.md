@@ -54,7 +54,7 @@ tags: app
 
 是关注与信任着这个品牌的人，**一个人相信，成不了品牌，一群人的信任，才能造就品牌。这群人的集合，就是社群。而付费社群，就是愿意“自己掏钱”和品牌站在一起的这群人，更是核心中的核心。**
 
-<div align="left"><img src="../img/seven-years/20210602_loudou.jpg" width="15%"></div>
+<div align="left"><img src="/img/seven-years/20210602_loudou.jpg" width="15%"></div>
 
 营销学中有一个著名的“销售漏斗”模型——要达成一个销售过程，需要经历注意（Attention）、兴趣（Interest）、欲望（Desire）、记忆（Memory）、行动（Action）的过程，每一步都在“减少”。
 
@@ -104,7 +104,7 @@ OKR 管理强调的关键点是聚焦——如果目标太多，往往就会淡�
 
 无论是长期应用 OKR 的 Google、字节跳动，还是强调做减法的 Apple、微信，他们的减法，将组织和产品的价值越做越少了吗？并没有，反而他们都在越做越少的同时，将价值、用户、收益做到无比的丰沛。所以，其实这个漏斗图还可以这么看：
 
-<div align="left"><img src="../img/seven-years/20210602_laba.jpg" width="15%"></div>
+<div align="left"><img src="/img/seven-years/20210602_laba.jpg" width="15%"></div>
 
 将漏斗倒过来看，其实是个扬声器。当你有了业务中最本质与核心的一批用户时，你就可以将漏斗翻过来，发出你的声音，做大你的影响力。
 
