@@ -1,5 +1,5 @@
-title:          notepad
-description:    知识星球, 小密圈, 圈子, 亲密社交, 连接一千位铁杆粉丝, 移动互联网, 创业, 投资, 独立开发者, 小而美
+title:          Luca's notepad
+description:    知识星球, 社区, 社群, 工具, 小密圈, 圈子, 亲密社交, 连接一千位铁杆粉丝, 移动互联网, 创业, 投资, 独立开发者, 小而美, 小日子
 plugins:
   - jekyll-paginate
   - jekyll-category-pages
