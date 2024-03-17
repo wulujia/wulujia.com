@@ -18,7 +18,8 @@ tags: software
 - EuDic
 - Simplenote
 - Readwise
-- 沉浸式翻译
+- [Immersive Translate](https://immersivetranslate.com/)
+- [Language Reactor](https://www.languagereactor.com/)
 
 ## 中大厂产品
 
@@ -58,6 +59,21 @@ tags: software
 
 ## 开发
 
-- Vercel https://vercel.com/
-- Supabase https://supabase.com/
-- Sqlite https://www.sqlite.org/
+- [Vercel](https://vercel.com/)
+- [Supabase](https://supabase.com/)
+- [Sqlite](https://www.sqlite.org/)
+
+## 其他产品
+
+这里记录的，未必深度使用，但是在各种渠道看到过，感兴趣，做记录备查。
+
+- [n8n](https://n8n.io/)
+- [arxiv](https://arxiv.org/)
+- [speak](https://www.speak.com/)
+- [snipd](https://www.snipd.com/)
+- [producthunt](https://www.producthunt.com/)
+- [shots](https://shots.so/)
+- [bio.link](https://bio.link/)
+- [it-tools](https://it-tools.tech/)
+- [orbstack](https://orbstack.dev/)
+- [meiye](https://www.meiye.art/)
