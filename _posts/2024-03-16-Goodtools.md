@@ -55,3 +55,9 @@ tags: software
 - 微信
 - 企业微信
 - 微信读书
+
+## 开发
+
+- Vercel https://vercel.com/
+- Supabase https://supabase.com/
+- Sqlite https://www.sqlite.org/
