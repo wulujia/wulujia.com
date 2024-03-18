@@ -10,14 +10,15 @@ tags: software
 
 ## 开源产品
 
-- VLC
-- Keka
+- [VLC](https://www.videolan.org/)
+- [Keka](https://www.keka.io/)
+- [LocalSend](https://localsend.org/)
 
 ## 小产品
 
-- EuDic
-- Simplenote
-- Readwise
+- [EuDic](https://www.eudic.net/)
+- [Simplenote](https://simplenote.com/)
+- [Readwise](https://readwise.io/)
 - [Immersive Translate](https://immersivetranslate.com/)
 - [Language Reactor](https://www.languagereactor.com/)
 
