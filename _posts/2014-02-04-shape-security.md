@@ -2,7 +2,7 @@
 layout: post
 title: 安全公司：ShapeSecurity
 date: 2014-02-04 19:19:22
-categories: company
+categories: misc
 tags: security web
 ---
 

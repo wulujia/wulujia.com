@@ -2,7 +2,7 @@
 layout: post
 title: 安全公司：CloudLock
 date: 2014-02-01 19:19:22
-categories: company
+categories: misc
 tags: enterprise security cloud
 ---
 

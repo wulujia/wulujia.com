@@ -2,7 +2,7 @@
 layout: post
 title: 安全公司：CipherCloud
 date: 2014-01-18 19:50:22
-categories: company
+categories: misc
 tags: security ciphercloud cloud
 ---
 

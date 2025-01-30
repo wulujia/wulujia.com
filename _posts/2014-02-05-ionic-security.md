@@ -2,7 +2,7 @@
 layout: post
 title: 安全公司：Ionic Security
 date: 2014-02-05 02:19:22
-categories: company
+categories: misc
 tags: security cloud encrypt
 ---
 
