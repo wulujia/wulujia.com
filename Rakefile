@@ -29,7 +29,9 @@ task :tags do
   
   options = Jekyll.configuration({})
   site = Jekyll::Site.new(options)
-  site.read_posts('')
+#  site.read_posts('')
+  site.read
+  posts = site.posts.respond_to?(:docs) ? site.posts.docs : site.posts
   site.tags.sort.each do |tag, posts|
     html = ''
     html << <<-HTML
