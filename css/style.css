@@ -533,8 +533,3 @@ nav li a:hover {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-
-.toc ol {
-  list-style: none;
-  padding-left: 0;
-}
