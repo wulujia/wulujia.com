@@ -2,7 +2,7 @@
 layout: post
 title:  内容创业的星星之火
 date: 2017-02-17 19:19:22
-categories: product
+categories: tech
 tags: app
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: 企业云盘的安全特性
 date: 2014-01-18 01:19:22
-categories: product
+categories: tech
 tags: security cloud storage
 ---
 

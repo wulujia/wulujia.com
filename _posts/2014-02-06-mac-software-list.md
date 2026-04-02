@@ -2,7 +2,7 @@
 layout: post
 title:  Mac优秀软件记录
 date: 2014-02-06 19:19:22
-categories: product
+categories: tech
 tags: mac software
 ---
 

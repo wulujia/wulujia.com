@@ -2,7 +2,7 @@
 layout: post
 title:  七年知识星球经验，剖析付费社群本质
 date:   2021-06-23 07:30:22
-categories: product
+categories: tech
 tags: app 
 ---
 

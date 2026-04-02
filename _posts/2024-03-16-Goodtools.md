@@ -2,7 +2,7 @@
 layout: post
 title: 好工具记录
 date: 2024-03-15 18:28:32
-categories: product
+categories: tech
 tags: software
 ---
 
