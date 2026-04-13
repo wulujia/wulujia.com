@@ -30,7 +30,7 @@ layout: default
     &nbsp;&nbsp;&nbsp;&nbsp;<span>&laquo; Previous</span>&nbsp;&nbsp;
   {% endif %}
 
-  {% for page in (1.paginator.total_pages) %}
+  {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
       <em>{{ page }}</em>
     {% elsif page == 1 %}
