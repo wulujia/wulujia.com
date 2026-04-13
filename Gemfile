@@ -8,5 +8,4 @@ gem 'base64'
 group :jekyll_plugins do
     gem "jekyll-paginate"
     gem "jekyll-category-pages"
-    gem "jekyll-multiple-languages"
 end
