@@ -1,11 +1,16 @@
 title:          luca's notepad
 description:    知识星球, 社区, 社群, 工具, 小密圈, 圈子, 亲密社交, 连接一千位铁杆粉丝, 移动互联网, 创业, 投资, 独立开发者, 小而美,Slax Note,Slax Reader,TealSeed,EasyDay,EasyHabit,敲敲打卡
+url:            https://wulujia.com
+lang:           zh-CN
 plugins:
   - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 paginate:       15
 paginate_path: "/pages/page:num/"
 permalink:      /:year/:month/:day/:title
-exclude:        ["CNAME", "Rakefile", "template.md", "Gemfile.lock", "Gemfile", ".DS_Store"]
+exclude:        ["CNAME", "Rakefile", "template.md", "Gemfile.lock", "Gemfile", ".DS_Store", "README.md"]
 markdown: 	kramdown
 url_root:       https://wulujia.com
 author:         wulujia
